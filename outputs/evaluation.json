@@ -1,0 +1,4325 @@
+{
+  "main_hybrid": {
+    "run": "main_hybrid",
+    "test": "main_test.npz",
+    "model_type": "hybrid",
+    "ablate_blocks": [],
+    "n_records": 5400,
+    "n_params": 678707,
+    "overall": {
+      "n": 269373,
+      "log_rmse": 0.18956387042999268,
+      "log_bias": 0.008463861420750618,
+      "median_fold_error": 1.0501891374588013,
+      "p90_fold_error": 1.2582976818084717,
+      "within_1.25x": 0.8956354200309607,
+      "within_2x": 0.986338645669759,
+      "r2_log": 0.9968684911727905
+    },
+    "by_nutrition": {
+      "adequate": {
+        "n": 60534,
+        "log_rmse": 0.14923347532749176,
+        "log_bias": 0.0019461261108517647,
+        "median_fold_error": 1.0463389158248901,
+        "p90_fold_error": 1.2047048807144165,
+        "within_1.25x": 0.9301879935243004,
+        "within_2x": 0.9935903789605841,
+        "r2_log": 0.9977402091026306,
+        "n_records": 1212
+      },
+      "mild": {
+        "n": 11226,
+        "log_rmse": 0.19354872405529022,
+        "log_bias": 0.007360788993537426,
+        "median_fold_error": 1.0543689727783203,
+        "p90_fold_error": 1.2927703857421875,
+        "within_1.25x": 0.88161411010155,
+        "within_2x": 0.9838767147692856,
+        "r2_log": 0.9969870448112488,
+        "n_records": 225
+      },
+      "moderate": {
+        "n": 45522,
+        "log_rmse": 0.15723851323127747,
+        "log_bias": 0.0022880237083882093,
+        "median_fold_error": 1.0501675605773926,
+        "p90_fold_error": 1.235621452331543,
+        "within_1.25x": 0.9075392118096745,
+        "within_2x": 0.9909933658450859,
+        "r2_log": 0.9977365136146545,
+        "n_records": 912
+      },
+      "severe_marasmic": {
+        "n": 125109,
+        "log_rmse": 0.20610280334949493,
+        "log_bias": 0.015068736858665943,
+        "median_fold_error": 1.0494754314422607,
+        "p90_fold_error": 1.2840232849121094,
+        "within_1.25x": 0.8846365968875141,
+        "within_2x": 0.9816559959715129,
+        "r2_log": 0.9966704249382019,
+        "n_records": 2511
+      },
+      "severe_oedematous": {
+        "n": 26982,
+        "log_rmse": 0.23350603878498077,
+        "log_bias": 0.0033395083155483007,
+        "median_fold_error": 1.0632145404815674,
+        "p90_fold_error": 1.3328924179077148,
+        "within_1.25x": 0.8548662071010303,
+        "within_2x": 0.984952931584019,
+        "r2_log": 0.9943304657936096,
+        "n_records": 540
+      }
+    },
+    "by_drug": {
+      "amoxicillin": {
+        "n": 27636,
+        "log_rmse": 0.2774890959262848,
+        "log_bias": 0.04985162615776062,
+        "median_fold_error": 1.0831918716430664,
+        "p90_fold_error": 1.4247801303863525,
+        "within_1.25x": 0.8135764944275583,
+        "within_2x": 0.968989723548994,
+        "r2_log": 0.9951506853103638,
+        "n_records": 555
+      },
+      "ceftriaxone": {
+        "n": 30400,
+        "log_rmse": 0.07892880588769913,
+        "log_bias": 0.001089931814931333,
+        "median_fold_error": 1.0407472848892212,
+        "p90_fold_error": 1.1323542594909668,
+        "within_1.25x": 0.9849013157894737,
+        "within_2x": 1.0,
+        "r2_log": 0.9940345287322998,
+        "n_records": 608
+      },
+      "gentamicin": {
+        "n": 30450,
+        "log_rmse": 0.04932041093707085,
+        "log_bias": -0.003004841972142458,
+        "median_fold_error": 1.0188629627227783,
+        "p90_fold_error": 1.0675913095474243,
+        "within_1.25x": 0.9925779967159277,
+        "within_2x": 0.9998357963875205,
+        "r2_log": 0.9993659853935242,
+        "n_records": 609
+      },
+      "isoniazid": {
+        "n": 28010,
+        "log_rmse": 0.22920985519886017,
+        "log_bias": 0.0407758504152298,
+        "median_fold_error": 1.0801670551300049,
+        "p90_fold_error": 1.3789865970611572,
+        "within_1.25x": 0.8308818279186005,
+        "within_2x": 0.9805069617993574,
+        "r2_log": 0.9966661930084229,
+        "n_records": 564
+      },
+      "rifampicin": {
+        "n": 31062,
+        "log_rmse": 0.3132917284965515,
+        "log_bias": 0.013661173172295094,
+        "median_fold_error": 1.1144332885742188,
+        "p90_fold_error": 1.5608799457550049,
+        "within_1.25x": 0.7530744961689524,
+        "within_2x": 0.9533191681153821,
+        "r2_log": 0.9915482997894287,
+        "n_records": 626
+      },
+      "lumefantrine": {
+        "n": 30000,
+        "log_rmse": 0.15941700339317322,
+        "log_bias": -0.005383296869695187,
+        "median_fold_error": 1.0922071933746338,
+        "p90_fold_error": 1.2769644260406494,
+        "within_1.25x": 0.8791333333333333,
+        "within_2x": 0.9967,
+        "r2_log": 0.9832523465156555,
+        "n_records": 600
+      },
+      "albendazole": {
+        "n": 30015,
+        "log_rmse": 0.24777290225028992,
+        "log_bias": -0.0030131442472338676,
+        "median_fold_error": 1.1048674583435059,
+        "p90_fold_error": 1.4199965000152588,
+        "within_1.25x": 0.7980676328502415,
+        "within_2x": 0.975912043978011,
+        "r2_log": 0.9909927248954773,
+        "n_records": 602
+      },
+      "paracetamol": {
+        "n": 30750,
+        "log_rmse": 0.06559636443853378,
+        "log_bias": -0.015791283920407295,
+        "median_fold_error": 1.0388046503067017,
+        "p90_fold_error": 1.1109811067581177,
+        "within_1.25x": 0.9940813008130082,
+        "within_2x": 1.0,
+        "r2_log": 0.9968591928482056,
+        "n_records": 615
+      },
+      "fluconazole": {
+        "n": 31050,
+        "log_rmse": 0.031391967087984085,
+        "log_bias": 0.004239779431372881,
+        "median_fold_error": 1.0194274187088013,
+        "p90_fold_error": 1.0534770488739014,
+        "within_1.25x": 1.0,
+        "within_2x": 1.0,
+        "r2_log": 0.9982016086578369,
+        "n_records": 621
+      }
+    },
+    "by_setting": {
+      "clean_municipal": {
+        "n": 59513,
+        "log_rmse": 0.17799772322177887,
+        "log_bias": 0.019883615896105766,
+        "median_fold_error": 1.046558141708374,
+        "p90_fold_error": 1.2472683191299438,
+        "within_1.25x": 0.901282072824425,
+        "within_2x": 0.9875489388873019,
+        "r2_log": 0.9973351955413818,
+        "n_records": 1194
+      },
+      "mixed_periurban": {
+        "n": 77200,
+        "log_rmse": 0.17438945174217224,
+        "log_bias": 0.0048207808285951614,
+        "median_fold_error": 1.0454366207122803,
+        "p90_fold_error": 1.2350385189056396,
+        "within_1.25x": 0.9081088082901554,
+        "within_2x": 0.9879145077720207,
+        "r2_log": 0.9974052309989929,
+        "n_records": 1548
+      },
+      "shallow_tubewell": {
+        "n": 45981,
+        "log_rmse": 0.20619487762451172,
+        "log_bias": 0.009478812105953693,
+        "median_fold_error": 1.0584081411361694,
+        "p90_fold_error": 1.282336711883545,
+        "within_1.25x": 0.8851047171657859,
+        "within_2x": 0.9828624866792806,
+        "r2_log": 0.9961288571357727,
+        "n_records": 921
+      },
+      "fluoride_belt": {
+        "n": 26498,
+        "log_rmse": 0.1856141984462738,
+        "log_bias": 0.0022458608727902174,
+        "median_fold_error": 1.050450086593628,
+        "p90_fold_error": 1.266350507736206,
+        "within_1.25x": 0.8915012453770096,
+        "within_2x": 0.987848139482225,
+        "r2_log": 0.996944785118103,
+        "n_records": 531
+      },
+      "industrial_runoff": {
+        "n": 25777,
+        "log_rmse": 0.20028460025787354,
+        "log_bias": -0.0017742958152666688,
+        "median_fold_error": 1.061049461364746,
+        "p90_fold_error": 1.295588731765747,
+        "within_1.25x": 0.8748108779144198,
+        "within_2x": 0.9857237071808201,
+        "r2_log": 0.9961212873458862,
+        "n_records": 516
+      },
+      "agricultural": {
+        "n": 34404,
+        "log_rmse": 0.21188285946846008,
+        "log_bias": 0.007987957447767258,
+        "median_fold_error": 1.0514956712722778,
+        "p90_fold_error": 1.2692972421646118,
+        "within_1.25x": 0.8907394489012905,
+        "within_2x": 0.9846529473317056,
+        "r2_log": 0.996229350566864,
+        "n_records": 690
+      }
+    },
+    "at_sampled_points": {
+      "n": 68600,
+      "log_rmse": 0.18311238288879395,
+      "log_bias": 0.00799652747809887,
+      "median_fold_error": 1.050258994102478,
+      "p90_fold_error": 1.2585115432739258,
+      "within_1.25x": 0.8954081632653061,
+      "within_2x": 0.9871137026239067,
+      "r2_log": 0.9969183206558228
+    },
+    "parameters": {
+      "CL": {
+        "log_rmse": 0.08694694191217422,
+        "median_fold_error": 1.0507158041000366,
+        "within_1.25x": 0.9835185185185186,
+        "r2_log": 0.9948665499687195
+      },
+      "V1": {
+        "log_rmse": 0.10286404192447662,
+        "median_fold_error": 1.0519660711288452,
+        "within_1.25x": 0.9553703703703704,
+        "r2_log": 0.9814186096191406
+      },
+      "Q": {
+        "log_rmse": 0.07128126174211502,
+        "median_fold_error": 1.0517269372940063,
+        "within_1.25x": 0.9985185185185185,
+        "r2_log": 0.9816736578941345
+      },
+      "V2": {
+        "log_rmse": 0.1204756647348404,
+        "median_fold_error": 1.0607086420059204,
+        "within_1.25x": 0.9577777777777777,
+        "r2_log": 0.9880918860435486
+      },
+      "ka": {
+        "log_rmse": 0.08178088814020157,
+        "median_fold_error": 1.0572943687438965,
+        "within_1.25x": 0.9921109251733206,
+        "r2_log": 0.9866196513175964
+      },
+      "F": {
+        "log_rmse": 0.08884576708078384,
+        "median_fold_error": 1.071014404296875,
+        "within_1.25x": 0.9942592592592593,
+        "r2_log": 0.9916985630989075
+      },
+      "fu": {
+        "log_rmse": 0.058298252522945404,
+        "median_fold_error": 1.0205272436141968,
+        "within_1.25x": 0.992037037037037,
+        "r2_log": 0.9986530542373657
+      }
+    },
+    "calibration": {
+      "epistemic_coverage_of_truth_50": 0.20255841558071852,
+      "total_coverage_of_observations_50": 0.49410377161853647,
+      "epistemic_coverage_of_truth_80": 0.3661533490531729,
+      "total_coverage_of_observations_80": 0.7939577603095028,
+      "epistemic_coverage_of_truth_90": 0.4495328867380749,
+      "total_coverage_of_observations_90": 0.8926288388342563,
+      "epistemic_coverage_of_truth_95": 0.5145086932593751,
+      "total_coverage_of_observations_95": 0.9421117508699622,
+      "mean_epistemic_log_sd": 0.04039057716727257,
+      "mean_total_log_sd": 0.21624802459370007,
+      "calibrated_coverage_50": 0.5402042185065601,
+      "calibrated_coverage_80": 0.7834479192343267,
+      "calibrated_coverage_90": 0.8602936456550005,
+      "calibrated_coverage_95": 0.9048974950477788
+    },
+    "epistemic_scale": 3.125760555267334,
+    "importance": [
+      {
+        "block": "anthro",
+        "feature": "weight_kg",
+        "delta_log_rmse": 0.3893028199672699,
+        "sd": 0.007858306169509888
+      },
+      {
+        "block": "anthro",
+        "feature": "oedema_grade",
+        "delta_log_rmse": 0.20305798947811127,
+        "sd": 0.004315868020057678
+      },
+      {
+        "block": "anthro",
+        "feature": "male",
+        "delta_log_rmse": 0.1968984156847,
+        "sd": 0.00024239718914031982
+      },
+      {
+        "block": "tox",
+        "feature": "water_arsenic",
+        "delta_log_rmse": 0.159560889005661,
+        "sd": 0.0010863840579986572
+      },
+      {
+        "block": "labs",
+        "feature": "albumin_g_l",
+        "delta_log_rmse": 0.15715080499649048,
+        "sd": 0.0011688470840454102
+      },
+      {
+        "block": "anthro",
+        "feature": "weight_for_height_pct",
+        "delta_log_rmse": 0.08947069942951202,
+        "sd": 0.004138514399528503
+      },
+      {
+        "block": "anthro",
+        "feature": "whz",
+        "delta_log_rmse": 0.07137186825275421,
+        "sd": 0.00227336585521698
+      },
+      {
+        "block": "tox",
+        "feature": "water_lead",
+        "delta_log_rmse": 0.052295148372650146,
+        "sd": 0.0026326030492782593
+      },
+      {
+        "block": "anthro",
+        "feature": "bmi",
+        "delta_log_rmse": 0.04532579332590103,
+        "sd": 0.001902453601360321
+      },
+      {
+        "block": "labs",
+        "feature": "crp_mg_l",
+        "delta_log_rmse": 0.040421612560749054,
+        "sd": 0.004372335970401764
+      },
+      {
+        "block": "anthro",
+        "feature": "log_weight",
+        "delta_log_rmse": 0.03753706067800522,
+        "sd": 0.0011076852679252625
+      },
+      {
+        "block": "anthro",
+        "feature": "haz",
+        "delta_log_rmse": 0.02112291008234024,
+        "sd": 0.0002531185746192932
+      },
+      {
+        "block": "labs",
+        "feature": "agp_g_l",
+        "delta_log_rmse": 0.014728277921676636,
+        "sd": 0.0006652921438217163
+      },
+      {
+        "block": "anthro",
+        "feature": "waz",
+        "delta_log_rmse": 0.013198480010032654,
+        "sd": 0.0014857947826385498
+      },
+      {
+        "block": "tox",
+        "feature": "setting_clean_municipal",
+        "delta_log_rmse": 0.01143878698348999,
+        "sd": 0.000867009162902832
+      },
+      {
+        "block": "tox",
+        "feature": "water_cadmium",
+        "delta_log_rmse": 0.011059820652008057,
+        "sd": 0.001308247447013855
+      },
+      {
+        "block": "anthro",
+        "feature": "age_months",
+        "delta_log_rmse": 0.0066213458776474,
+        "sd": 0.0001157522201538086
+      },
+      {
+        "block": "labs",
+        "feature": "haematocrit",
+        "delta_log_rmse": 0.0051229894161224365,
+        "sd": 0.0004973858594894409
+      },
+      {
+        "block": "tox",
+        "feature": "water_manganese",
+        "delta_log_rmse": 0.00481104850769043,
+        "sd": 0.00039161741733551025
+      },
+      {
+        "block": "tox",
+        "feature": "blood_lead",
+        "delta_log_rmse": 0.004125364124774933,
+        "sd": 0.0002666786313056946
+      },
+      {
+        "block": "labs",
+        "feature": "haemoglobin_g_dl",
+        "delta_log_rmse": 0.003621712327003479,
+        "sd": 8.887052536010742e-05
+      },
+      {
+        "block": "tox",
+        "feature": "urinary_arsenic",
+        "delta_log_rmse": 0.0034537166357040405,
+        "sd": 0.0009702146053314209
+      },
+      {
+        "block": "tox",
+        "feature": "water_fluoride",
+        "delta_log_rmse": 0.0030585750937461853,
+        "sd": 0.0010989829897880554
+      },
+      {
+        "block": "tox",
+        "feature": "setting_industrial_runoff",
+        "delta_log_rmse": 0.0028436854481697083,
+        "sd": 0.00040472298860549927
+      },
+      {
+        "block": "anthro",
+        "feature": "muac_mm",
+        "delta_log_rmse": 0.0025952309370040894,
+        "sd": 0.00040067732334136963
+      },
+      {
+        "block": "anthro",
+        "feature": "height_cm",
+        "delta_log_rmse": 0.0022899210453033447,
+        "sd": 0.0011296272277832031
+      },
+      {
+        "block": "tox",
+        "feature": "water_nitrate",
+        "delta_log_rmse": 0.0015824288129806519,
+        "sd": 0.0009812861680984497
+      },
+      {
+        "block": "tox",
+        "feature": "setting_fluoride_belt",
+        "delta_log_rmse": 0.0013822540640830994,
+        "sd": 0.00017695873975753784
+      },
+      {
+        "block": "tox",
+        "feature": "setting_shallow_tubewell",
+        "delta_log_rmse": 0.0010232403874397278,
+        "sd": 0.0014281496405601501
+      },
+      {
+        "block": "tox",
+        "feature": "setting_mixed_periurban",
+        "delta_log_rmse": -0.0007809251546859741,
+        "sd": 0.0012182295322418213
+      },
+      {
+        "block": "tox",
+        "feature": "setting_agricultural",
+        "delta_log_rmse": -0.0023451298475265503,
+        "sd": 0.0005250722169876099
+      }
+    ],
+    "seconds": 245.18763494491577
+  },
+  "main_blackbox": {
+    "run": "main_blackbox",
+    "test": "main_test.npz",
+    "model_type": "blackbox",
+    "ablate_blocks": [],
+    "n_records": 5400,
+    "n_params": 660628,
+    "overall": {
+      "n": 269373,
+      "log_rmse": 0.9786613583564758,
+      "log_bias": 0.17392461001873016,
+      "median_fold_error": 1.1768150329589844,
+      "p90_fold_error": 1.862804651260376,
+      "within_1.25x": 0.6271378348980782,
+      "within_2x": 0.9108670876442703,
+      "r2_log": 0.919009804725647
+    },
+    "by_nutrition": {
+      "adequate": {
+        "n": 60534,
+        "log_rmse": 0.8685973286628723,
+        "log_bias": 0.12097323685884476,
+        "median_fold_error": 1.1749391555786133,
+        "p90_fold_error": 1.8040213584899902,
+        "within_1.25x": 0.6317441437869628,
+        "within_2x": 0.9185086067334061,
+        "r2_log": 0.9249166250228882,
+        "n_records": 1212
+      },
+      "mild": {
+        "n": 11226,
+        "log_rmse": 1.1428338289260864,
+        "log_bias": 0.23556673526763916,
+        "median_fold_error": 1.1711692810058594,
+        "p90_fold_error": 1.967278003692627,
+        "within_1.25x": 0.6388740424015678,
+        "within_2x": 0.9021913415285944,
+        "r2_log": 0.8992725610733032,
+        "n_records": 225
+      },
+      "moderate": {
+        "n": 45522,
+        "log_rmse": 0.9595040678977966,
+        "log_bias": 0.16785073280334473,
+        "median_fold_error": 1.1671092510223389,
+        "p90_fold_error": 1.7431018352508545,
+        "within_1.25x": 0.6458415711084751,
+        "within_2x": 0.9211809674443127,
+        "r2_log": 0.918277382850647,
+        "n_records": 912
+      },
+      "severe_marasmic": {
+        "n": 125109,
+        "log_rmse": 1.0627182722091675,
+        "log_bias": 0.22956646978855133,
+        "median_fold_error": 1.1752747297286987,
+        "p90_fold_error": 1.9084389209747314,
+        "within_1.25x": 0.6315452925049357,
+        "within_2x": 0.9059540081049325,
+        "r2_log": 0.915153980255127,
+        "n_records": 2511
+      },
+      "severe_oedematous": {
+        "n": 26982,
+        "log_rmse": 0.7321357131004333,
+        "log_bias": 0.019323717802762985,
+        "median_fold_error": 1.2109253406524658,
+        "p90_fold_error": 1.9792052507400513,
+        "within_1.25x": 0.5599288414498554,
+        "within_2x": 0.9027129197242606,
+        "r2_log": 0.9442918300628662,
+        "n_records": 540
+      }
+    },
+    "by_drug": {
+      "amoxicillin": {
+        "n": 27636,
+        "log_rmse": 1.6171795129776,
+        "log_bias": 0.48497334122657776,
+        "median_fold_error": 1.2536710500717163,
+        "p90_fold_error": 5.231955528259277,
+        "within_1.25x": 0.4951150673035172,
+        "within_2x": 0.8239614994934144,
+        "r2_log": 0.8451094627380371,
+        "n_records": 555
+      },
+      "ceftriaxone": {
+        "n": 30400,
+        "log_rmse": 0.1858483999967575,
+        "log_bias": 0.022710077464580536,
+        "median_fold_error": 1.1297675371170044,
+        "p90_fold_error": 1.3574557304382324,
+        "within_1.25x": 0.7766776315789473,
+        "within_2x": 0.9998026315789473,
+        "r2_log": 0.9674131870269775,
+        "n_records": 608
+      },
+      "gentamicin": {
+        "n": 30450,
+        "log_rmse": 0.3640344738960266,
+        "log_bias": 0.19489245116710663,
+        "median_fold_error": 1.1623167991638184,
+        "p90_fold_error": 1.477703332901001,
+        "within_1.25x": 0.6983579638752052,
+        "within_2x": 0.9473563218390805,
+        "r2_log": 0.9752680063247681,
+        "n_records": 609
+      },
+      "isoniazid": {
+        "n": 28010,
+        "log_rmse": 1.6949961185455322,
+        "log_bias": 0.6117968559265137,
+        "median_fold_error": 1.236355185508728,
+        "p90_fold_error": 10.701693534851074,
+        "within_1.25x": 0.5175294537665119,
+        "within_2x": 0.7900392716886826,
+        "r2_log": 0.836258053779602,
+        "n_records": 564
+      },
+      "rifampicin": {
+        "n": 31062,
+        "log_rmse": 1.4588038921356201,
+        "log_bias": 0.3415466845035553,
+        "median_fold_error": 1.313682198524475,
+        "p90_fold_error": 4.639803409576416,
+        "within_1.25x": 0.4214474277251948,
+        "within_2x": 0.8031678578327216,
+        "r2_log": 0.8264660239219666,
+        "n_records": 626
+      },
+      "lumefantrine": {
+        "n": 30000,
+        "log_rmse": 0.43142402172088623,
+        "log_bias": -0.08275442570447922,
+        "median_fold_error": 1.1918470859527588,
+        "p90_fold_error": 1.6066257953643799,
+        "within_1.25x": 0.6075666666666667,
+        "within_2x": 0.9572,
+        "r2_log": 0.8817209601402283,
+        "n_records": 600
+      },
+      "albendazole": {
+        "n": 30015,
+        "log_rmse": 0.9470834136009216,
+        "log_bias": 0.0861671045422554,
+        "median_fold_error": 1.3275781869888306,
+        "p90_fold_error": 2.3511691093444824,
+        "within_1.25x": 0.40133266699983344,
+        "within_2x": 0.8588705647176412,
+        "r2_log": 0.8694677352905273,
+        "n_records": 602
+      },
+      "paracetamol": {
+        "n": 30750,
+        "log_rmse": 0.17833445966243744,
+        "log_bias": -0.03394131734967232,
+        "median_fold_error": 1.1194525957107544,
+        "p90_fold_error": 1.3419134616851807,
+        "within_1.25x": 0.7999349593495935,
+        "within_2x": 0.9993170731707317,
+        "r2_log": 0.9762505888938904,
+        "n_records": 615
+      },
+      "fluconazole": {
+        "n": 31050,
+        "log_rmse": 0.13645215332508087,
+        "log_bias": 0.0005628135404549539,
+        "median_fold_error": 1.0936713218688965,
+        "p90_fold_error": 1.2508912086486816,
+        "within_1.25x": 0.899098228663446,
+        "within_2x": 1.0,
+        "r2_log": 0.9653905034065247,
+        "n_records": 621
+      }
+    },
+    "by_setting": {
+      "clean_municipal": {
+        "n": 59513,
+        "log_rmse": 1.0022289752960205,
+        "log_bias": 0.21785791218280792,
+        "median_fold_error": 1.1726747751235962,
+        "p90_fold_error": 1.846213936805725,
+        "within_1.25x": 0.64226303496715,
+        "within_2x": 0.9098684321072706,
+        "r2_log": 0.918491005897522,
+        "n_records": 1194
+      },
+      "mixed_periurban": {
+        "n": 77200,
+        "log_rmse": 0.9654232263565063,
+        "log_bias": 0.16172365844249725,
+        "median_fold_error": 1.1709321737289429,
+        "p90_fold_error": 1.843995451927185,
+        "within_1.25x": 0.6380569948186529,
+        "within_2x": 0.9120336787564767,
+        "r2_log": 0.9226497411727905,
+        "n_records": 1548
+      },
+      "shallow_tubewell": {
+        "n": 45981,
+        "log_rmse": 0.9544975757598877,
+        "log_bias": 0.15147899091243744,
+        "median_fold_error": 1.1839532852172852,
+        "p90_fold_error": 1.8416163921356201,
+        "within_1.25x": 0.6094038842130445,
+        "within_2x": 0.9141601966029447,
+        "r2_log": 0.918964147567749,
+        "n_records": 921
+      },
+      "fluoride_belt": {
+        "n": 26498,
+        "log_rmse": 0.9441653490066528,
+        "log_bias": 0.1520252227783203,
+        "median_fold_error": 1.1815659999847412,
+        "p90_fold_error": 1.9234577417373657,
+        "within_1.25x": 0.618122122424334,
+        "within_2x": 0.9072005434372405,
+        "r2_log": 0.9229863882064819,
+        "n_records": 531
+      },
+      "industrial_runoff": {
+        "n": 25777,
+        "log_rmse": 0.9491890072822571,
+        "log_bias": 0.1547183096408844,
+        "median_fold_error": 1.1768962144851685,
+        "p90_fold_error": 1.841412901878357,
+        "within_1.25x": 0.6218722116615587,
+        "within_2x": 0.9158940140435272,
+        "r2_log": 0.9151917099952698,
+        "n_records": 516
+      },
+      "agricultural": {
+        "n": 34404,
+        "log_rmse": 1.0444430112838745,
+        "log_bias": 0.1865612119436264,
+        "median_fold_error": 1.1843481063842773,
+        "p90_fold_error": 1.9374289512634277,
+        "within_1.25x": 0.6110626671317289,
+        "within_2x": 0.9046331821881176,
+        "r2_log": 0.9111766815185547,
+        "n_records": 690
+      }
+    },
+    "at_sampled_points": {
+      "n": 68600,
+      "log_rmse": 0.9311308264732361,
+      "log_bias": 0.15579256415367126,
+      "median_fold_error": 1.1750551462173462,
+      "p90_fold_error": 1.8247102499008179,
+      "within_1.25x": 0.6285568513119534,
+      "within_2x": 0.9142419825072886,
+      "r2_log": 0.9223985075950623
+    },
+    "calibration": {
+      "epistemic_coverage_of_truth_50": 0.14131375242841182,
+      "total_coverage_of_observations_50": 0.5213355155167462,
+      "epistemic_coverage_of_truth_80": 0.2618655901922856,
+      "total_coverage_of_observations_80": 0.8178444634571472,
+      "epistemic_coverage_of_truth_90": 0.3290696437763222,
+      "total_coverage_of_observations_90": 0.9091368370588714,
+      "epistemic_coverage_of_truth_95": 0.3833328410942215,
+      "total_coverage_of_observations_95": 0.9541299699013035,
+      "mean_epistemic_log_sd": 0.07046312567862598,
+      "mean_total_log_sd": 0.3271111141551625,
+      "calibrated_coverage_50": 0.5293156683917227,
+      "calibrated_coverage_80": 0.7760483781684931,
+      "calibrated_coverage_90": 0.8497835724677756,
+      "calibrated_coverage_95": 0.8887987930106503
+    },
+    "epistemic_scale": 4.345355987548828,
+    "importance": [
+      {
+        "block": "anthro",
+        "feature": "oedema_grade",
+        "delta_log_rmse": 0.041794776916503906,
+        "sd": 0.0013044476509094238
+      },
+      {
+        "block": "anthro",
+        "feature": "male",
+        "delta_log_rmse": 0.01667603850364685,
+        "sd": 0.0005660355091094971
+      },
+      {
+        "block": "labs",
+        "feature": "albumin_g_l",
+        "delta_log_rmse": 0.010564446449279785,
+        "sd": 0.0001875758171081543
+      },
+      {
+        "block": "anthro",
+        "feature": "weight_for_height_pct",
+        "delta_log_rmse": 0.009907662868499756,
+        "sd": 0.000615537166595459
+      },
+      {
+        "block": "tox",
+        "feature": "water_arsenic",
+        "delta_log_rmse": 0.009348005056381226,
+        "sd": 0.0003909766674041748
+      },
+      {
+        "block": "anthro",
+        "feature": "whz",
+        "delta_log_rmse": 0.006330519914627075,
+        "sd": 0.00039121508598327637
+      },
+      {
+        "block": "anthro",
+        "feature": "bmi",
+        "delta_log_rmse": 0.005126863718032837,
+        "sd": 0.0005993545055389404
+      },
+      {
+        "block": "anthro",
+        "feature": "log_weight",
+        "delta_log_rmse": 0.004184037446975708,
+        "sd": 6.118416786193848e-05
+      },
+      {
+        "block": "tox",
+        "feature": "water_lead",
+        "delta_log_rmse": 0.003823578357696533,
+        "sd": 0.0007194280624389648
+      },
+      {
+        "block": "labs",
+        "feature": "crp_mg_l",
+        "delta_log_rmse": 0.0033497214317321777,
+        "sd": 0.00015813112258911133
+      },
+      {
+        "block": "tox",
+        "feature": "setting_clean_municipal",
+        "delta_log_rmse": 0.0022929012775421143,
+        "sd": 0.0005764663219451904
+      },
+      {
+        "block": "anthro",
+        "feature": "waz",
+        "delta_log_rmse": 0.002269566059112549,
+        "sd": 0.00024634599685668945
+      },
+      {
+        "block": "anthro",
+        "feature": "muac_mm",
+        "delta_log_rmse": 0.001556307077407837,
+        "sd": 0.00010272860527038574
+      },
+      {
+        "block": "labs",
+        "feature": "haemoglobin_g_dl",
+        "delta_log_rmse": 0.001237720251083374,
+        "sd": 2.5719404220581055e-05
+      },
+      {
+        "block": "tox",
+        "feature": "setting_industrial_runoff",
+        "delta_log_rmse": 0.000746309757232666,
+        "sd": 9.000301361083984e-06
+      },
+      {
+        "block": "tox",
+        "feature": "setting_shallow_tubewell",
+        "delta_log_rmse": 0.0005088746547698975,
+        "sd": 6.86347484588623e-05
+      },
+      {
+        "block": "labs",
+        "feature": "haematocrit",
+        "delta_log_rmse": 0.00045865774154663086,
+        "sd": 0.0002148151397705078
+      },
+      {
+        "block": "anthro",
+        "feature": "height_cm",
+        "delta_log_rmse": 0.00043320655822753906,
+        "sd": 9.310245513916016e-05
+      },
+      {
+        "block": "tox",
+        "feature": "setting_agricultural",
+        "delta_log_rmse": 0.00034314393997192383,
+        "sd": 1.806020736694336e-05
+      },
+      {
+        "block": "tox",
+        "feature": "water_fluoride",
+        "delta_log_rmse": 0.00023031234741210938,
+        "sd": 3.2961368560791016e-05
+      },
+      {
+        "block": "tox",
+        "feature": "water_manganese",
+        "delta_log_rmse": 7.462501525878906e-05,
+        "sd": 3.272294998168945e-05
+      },
+      {
+        "block": "anthro",
+        "feature": "haz",
+        "delta_log_rmse": 6.1005353927612305e-05,
+        "sd": 0.00036010146141052246
+      },
+      {
+        "block": "tox",
+        "feature": "water_nitrate",
+        "delta_log_rmse": 1.677870750427246e-05,
+        "sd": 0.00016561150550842285
+      },
+      {
+        "block": "tox",
+        "feature": "setting_mixed_periurban",
+        "delta_log_rmse": -0.00020614266395568848,
+        "sd": 6.529688835144043e-05
+      },
+      {
+        "block": "tox",
+        "feature": "water_cadmium",
+        "delta_log_rmse": -0.00037679076194763184,
+        "sd": 3.394484519958496e-05
+      },
+      {
+        "block": "tox",
+        "feature": "setting_fluoride_belt",
+        "delta_log_rmse": -0.0004092752933502197,
+        "sd": 0.00017020106315612793
+      },
+      {
+        "block": "anthro",
+        "feature": "age_months",
+        "delta_log_rmse": -0.000600963830947876,
+        "sd": 3.793835639953613e-05
+      },
+      {
+        "block": "anthro",
+        "feature": "weight_kg",
+        "delta_log_rmse": -0.000638812780380249,
+        "sd": 0.0003058016300201416
+      },
+      {
+        "block": "tox",
+        "feature": "urinary_arsenic",
+        "delta_log_rmse": -0.001848846673965454,
+        "sd": 0.0002910196781158447
+      },
+      {
+        "block": "labs",
+        "feature": "agp_g_l",
+        "delta_log_rmse": -0.0018808841705322266,
+        "sd": 9.167194366455078e-05
+      },
+      {
+        "block": "tox",
+        "feature": "blood_lead",
+        "delta_log_rmse": -0.003945857286453247,
+        "sd": 0.00015655159950256348
+      }
+    ],
+    "seconds": 53.32479000091553
+  },
+  "main_conc_only": {
+    "run": "main_conc_only",
+    "test": "main_test.npz",
+    "model_type": "hybrid",
+    "ablate_blocks": [],
+    "n_records": 5400,
+    "n_params": 658583,
+    "overall": {
+      "n": 269373,
+      "log_rmse": 0.7047551870346069,
+      "log_bias": 0.15123534202575684,
+      "median_fold_error": 1.154586672782898,
+      "p90_fold_error": 1.7204625606536865,
+      "within_1.25x": 0.6681367471869861,
+      "within_2x": 0.9303753531348725,
+      "r2_log": 0.9586278796195984
+    },
+    "by_nutrition": {
+      "adequate": {
+        "n": 60534,
+        "log_rmse": 0.6423416137695312,
+        "log_bias": 0.1205294206738472,
+        "median_fold_error": 1.1635477542877197,
+        "p90_fold_error": 1.5981602668762207,
+        "within_1.25x": 0.664998182839396,
+        "within_2x": 0.9412396339247365,
+        "r2_log": 0.9596002101898193,
+        "n_records": 1212
+      },
+      "mild": {
+        "n": 11226,
+        "log_rmse": 0.8363480567932129,
+        "log_bias": 0.1798216700553894,
+        "median_fold_error": 1.1629600524902344,
+        "p90_fold_error": 1.6481761932373047,
+        "within_1.25x": 0.672367717797969,
+        "within_2x": 0.9327454124354178,
+        "r2_log": 0.9462652206420898,
+        "n_records": 225
+      },
+      "moderate": {
+        "n": 45522,
+        "log_rmse": 0.6233468651771545,
+        "log_bias": 0.12437473237514496,
+        "median_fold_error": 1.1414097547531128,
+        "p90_fold_error": 1.561042070388794,
+        "within_1.25x": 0.7024954966829225,
+        "within_2x": 0.9497166205351258,
+        "r2_log": 0.9658364653587341,
+        "n_records": 912
+      },
+      "severe_marasmic": {
+        "n": 125109,
+        "log_rmse": 0.736230731010437,
+        "log_bias": 0.1673651486635208,
+        "median_fold_error": 1.1500056982040405,
+        "p90_fold_error": 1.705098271369934,
+        "within_1.25x": 0.6773853200009592,
+        "within_2x": 0.9306524710452485,
+        "r2_log": 0.9594927430152893,
+        "n_records": 2511
+      },
+      "severe_oedematous": {
+        "n": 26982,
+        "log_rmse": 0.7569919228553772,
+        "log_bias": 0.17875759303569794,
+        "median_fold_error": 1.1874065399169922,
+        "p90_fold_error": 2.1919076442718506,
+        "within_1.25x": 0.5725668964494849,
+        "within_2x": 0.8710992513527537,
+        "r2_log": 0.9437267184257507,
+        "n_records": 540
+      }
+    },
+    "by_drug": {
+      "amoxicillin": {
+        "n": 27636,
+        "log_rmse": 1.9163156747817993,
+        "log_bias": 0.6571971774101257,
+        "median_fold_error": 1.2207791805267334,
+        "p90_fold_error": 7.884247779846191,
+        "within_1.25x": 0.5324214792299898,
+        "within_2x": 0.7806484295845998,
+        "r2_log": 0.78912353515625,
+        "n_records": 555
+      },
+      "ceftriaxone": {
+        "n": 30400,
+        "log_rmse": 0.295806884765625,
+        "log_bias": 0.21313472092151642,
+        "median_fold_error": 1.1939630508422852,
+        "p90_fold_error": 1.6188210248947144,
+        "within_1.25x": 0.605328947368421,
+        "within_2x": 0.965625,
+        "r2_log": 0.9597017765045166,
+        "n_records": 608
+      },
+      "gentamicin": {
+        "n": 30450,
+        "log_rmse": 0.2012023776769638,
+        "log_bias": 0.10295023769140244,
+        "median_fold_error": 1.0918546915054321,
+        "p90_fold_error": 1.3294026851654053,
+        "within_1.25x": 0.8526765188834154,
+        "within_2x": 0.986272577996716,
+        "r2_log": 0.992182195186615,
+        "n_records": 609
+      },
+      "isoniazid": {
+        "n": 28010,
+        "log_rmse": 0.45814022421836853,
+        "log_bias": 0.1980285942554474,
+        "median_fold_error": 1.1417553424835205,
+        "p90_fold_error": 1.9932749271392822,
+        "within_1.25x": 0.6571224562656194,
+        "within_2x": 0.9006069260978222,
+        "r2_log": 0.988815426826477,
+        "n_records": 564
+      },
+      "rifampicin": {
+        "n": 31062,
+        "log_rmse": 0.6060120463371277,
+        "log_bias": -0.028231048956513405,
+        "median_fold_error": 1.2511974573135376,
+        "p90_fold_error": 2.3349177837371826,
+        "within_1.25x": 0.4988088339450132,
+        "within_2x": 0.8585087888738652,
+        "r2_log": 0.9683849811553955,
+        "n_records": 626
+      },
+      "lumefantrine": {
+        "n": 30000,
+        "log_rmse": 0.31272590160369873,
+        "log_bias": -0.07357485592365265,
+        "median_fold_error": 1.1827781200408936,
+        "p90_fold_error": 1.5339256525039673,
+        "within_1.25x": 0.6411,
+        "within_2x": 0.9628666666666666,
+        "r2_log": 0.9390494227409363,
+        "n_records": 600
+      },
+      "albendazole": {
+        "n": 30015,
+        "log_rmse": 0.4715556204319,
+        "log_bias": 0.16395559906959534,
+        "median_fold_error": 1.2200767993927002,
+        "p90_fold_error": 1.980837106704712,
+        "within_1.25x": 0.5427619523571547,
+        "within_2x": 0.9023155089122106,
+        "r2_log": 0.9713146090507507,
+        "n_records": 602
+      },
+      "paracetamol": {
+        "n": 30750,
+        "log_rmse": 0.11453863233327866,
+        "log_bias": 0.018876736983656883,
+        "median_fold_error": 1.0643070936203003,
+        "p90_fold_error": 1.2026985883712769,
+        "within_1.25x": 0.940520325203252,
+        "within_2x": 0.999869918699187,
+        "r2_log": 0.9901110529899597,
+        "n_records": 615
+      },
+      "fluconazole": {
+        "n": 31050,
+        "log_rmse": 0.1894509196281433,
+        "log_bias": 0.16096866130828857,
+        "median_fold_error": 1.1740446090698242,
+        "p90_fold_error": 1.3215198516845703,
+        "within_1.25x": 0.7263446054750402,
+        "within_2x": 0.9999677938808373,
+        "r2_log": 0.9814473986625671,
+        "n_records": 621
+      }
+    },
+    "by_setting": {
+      "clean_municipal": {
+        "n": 59513,
+        "log_rmse": 0.700212299823761,
+        "log_bias": 0.1495939940214157,
+        "median_fold_error": 1.1518735885620117,
+        "p90_fold_error": 1.734063744544983,
+        "within_1.25x": 0.6721892695713542,
+        "within_2x": 0.9285030161477325,
+        "r2_log": 0.9601467251777649,
+        "n_records": 1194
+      },
+      "mixed_periurban": {
+        "n": 77200,
+        "log_rmse": 0.6520376801490784,
+        "log_bias": 0.11329177767038345,
+        "median_fold_error": 1.140952706336975,
+        "p90_fold_error": 1.6260087490081787,
+        "within_1.25x": 0.6992098445595855,
+        "within_2x": 0.941139896373057,
+        "r2_log": 0.9647937417030334,
+        "n_records": 1548
+      },
+      "shallow_tubewell": {
+        "n": 45981,
+        "log_rmse": 0.7520461678504944,
+        "log_bias": 0.14967021346092224,
+        "median_fold_error": 1.1718692779541016,
+        "p90_fold_error": 1.7615398168563843,
+        "within_1.25x": 0.6386333485570127,
+        "within_2x": 0.9257084447924142,
+        "r2_log": 0.9504386782646179,
+        "n_records": 921
+      },
+      "fluoride_belt": {
+        "n": 26498,
+        "log_rmse": 0.6637586951255798,
+        "log_bias": 0.19738464057445526,
+        "median_fold_error": 1.169233798980713,
+        "p90_fold_error": 1.7683433294296265,
+        "within_1.25x": 0.6398596120461921,
+        "within_2x": 0.9262585855536267,
+        "r2_log": 0.9643803834915161,
+        "n_records": 531
+      },
+      "industrial_runoff": {
+        "n": 25777,
+        "log_rmse": 0.760753333568573,
+        "log_bias": 0.17832164466381073,
+        "median_fold_error": 1.1659581661224365,
+        "p90_fold_error": 1.7706557512283325,
+        "within_1.25x": 0.6404158746169065,
+        "within_2x": 0.9242735772200024,
+        "r2_log": 0.9471100568771362,
+        "n_records": 516
+      },
+      "agricultural": {
+        "n": 34404,
+        "log_rmse": 0.7469065189361572,
+        "log_bias": 0.18547043204307556,
+        "median_fold_error": 1.150235891342163,
+        "p90_fold_error": 1.7759581804275513,
+        "within_1.25x": 0.6733810022090455,
+        "within_2x": 0.9234391349843042,
+        "r2_log": 0.9559716582298279,
+        "n_records": 690
+      }
+    },
+    "at_sampled_points": {
+      "n": 68600,
+      "log_rmse": 0.6907695531845093,
+      "log_bias": 0.14457714557647705,
+      "median_fold_error": 1.1505930423736572,
+      "p90_fold_error": 1.7167518138885498,
+      "within_1.25x": 0.6705976676384839,
+      "within_2x": 0.9314868804664723,
+      "r2_log": 0.9579861760139465
+    },
+    "parameters": {
+      "CL": {
+        "log_rmse": 0.8275978565216064,
+        "median_fold_error": 1.2690918445587158,
+        "within_1.25x": 0.4766666666666667,
+        "r2_log": 0.5389084219932556
+      },
+      "V1": {
+        "log_rmse": 0.7686823606491089,
+        "median_fold_error": 1.681607961654663,
+        "within_1.25x": 0.2953703703703704,
+        "r2_log": 0.1847745180130005
+      },
+      "Q": {
+        "log_rmse": 1.5613998174667358,
+        "median_fold_error": 1.4535731077194214,
+        "within_1.25x": 0.30314814814814817,
+        "r2_log": -7.604185104370117
+      },
+      "V2": {
+        "log_rmse": 1.6300981044769287,
+        "median_fold_error": 1.665160894393921,
+        "within_1.25x": 0.3655555555555556,
+        "r2_log": -0.7619638442993164
+      },
+      "ka": {
+        "log_rmse": 0.2358684539794922,
+        "median_fold_error": 1.181738018989563,
+        "within_1.25x": 0.6385369352139613,
+        "r2_log": 0.8885669708251953
+      },
+      "F": {
+        "log_rmse": 0.8474873900413513,
+        "median_fold_error": 1.2650333642959595,
+        "within_1.25x": 0.47055555555555556,
+        "r2_log": 0.28787583112716675
+      },
+      "fu": {
+        "log_rmse": 1.8461456298828125,
+        "median_fold_error": 1.373660683631897,
+        "within_1.25x": 0.4338888888888889,
+        "r2_log": 0.008720040321350098
+      }
+    },
+    "calibration": {
+      "epistemic_coverage_of_truth_50": 0.1437912107223006,
+      "total_coverage_of_observations_50": 0.5070732178455537,
+      "epistemic_coverage_of_truth_80": 0.2691974442094823,
+      "total_coverage_of_observations_80": 0.7828485870230487,
+      "epistemic_coverage_of_truth_90": 0.3413547257105203,
+      "total_coverage_of_observations_90": 0.8776304724027182,
+      "epistemic_coverage_of_truth_95": 0.40214384036268475,
+      "total_coverage_of_observations_95": 0.9277140275190799,
+      "mean_epistemic_log_sd": 0.08780339089306918,
+      "mean_total_log_sd": 0.32037045467983594,
+      "calibrated_coverage_50": 0.5008117095832103,
+      "calibrated_coverage_80": 0.8007420288889201,
+      "calibrated_coverage_90": 0.8822750794992217,
+      "calibrated_coverage_95": 0.9246414731113581
+    },
+    "epistemic_scale": 3.739708662033081,
+    "importance": [
+      {
+        "block": "anthro",
+        "feature": "weight_kg",
+        "delta_log_rmse": 0.1635071039199829,
+        "sd": 0.0019755959510803223
+      },
+      {
+        "block": "anthro",
+        "feature": "oedema_grade",
+        "delta_log_rmse": 0.08061349391937256,
+        "sd": 0.0003604292869567871
+      },
+      {
+        "block": "anthro",
+        "feature": "male",
+        "delta_log_rmse": 0.050966739654541016,
+        "sd": 0.0011987090110778809
+      },
+      {
+        "block": "tox",
+        "feature": "water_arsenic",
+        "delta_log_rmse": 0.036042481660842896,
+        "sd": 0.0001755058765411377
+      },
+      {
+        "block": "labs",
+        "feature": "albumin_g_l",
+        "delta_log_rmse": 0.030167311429977417,
+        "sd": 0.0029122531414031982
+      },
+      {
+        "block": "anthro",
+        "feature": "weight_for_height_pct",
+        "delta_log_rmse": 0.02142980694770813,
+        "sd": 0.0026920735836029053
+      },
+      {
+        "block": "anthro",
+        "feature": "whz",
+        "delta_log_rmse": 0.009557664394378662,
+        "sd": 7.772445678710938e-05
+      },
+      {
+        "block": "labs",
+        "feature": "crp_mg_l",
+        "delta_log_rmse": 0.004940450191497803,
+        "sd": 9.85264778137207e-05
+      },
+      {
+        "block": "tox",
+        "feature": "setting_clean_municipal",
+        "delta_log_rmse": 0.004652649164199829,
+        "sd": 0.000838547945022583
+      },
+      {
+        "block": "anthro",
+        "feature": "bmi",
+        "delta_log_rmse": 0.0036056041717529297,
+        "sd": 0.0005789995193481445
+      },
+      {
+        "block": "tox",
+        "feature": "water_lead",
+        "delta_log_rmse": 0.0025616586208343506,
+        "sd": 0.0001493394374847412
+      },
+      {
+        "block": "anthro",
+        "feature": "haz",
+        "delta_log_rmse": 0.0023020803928375244,
+        "sd": 0.0009061992168426514
+      },
+      {
+        "block": "anthro",
+        "feature": "muac_mm",
+        "delta_log_rmse": 0.002014070749282837,
+        "sd": 5.313754081726074e-05
+      },
+      {
+        "block": "tox",
+        "feature": "setting_shallow_tubewell",
+        "delta_log_rmse": 0.0018538236618041992,
+        "sd": 0.0005353689193725586
+      },
+      {
+        "block": "labs",
+        "feature": "haemoglobin_g_dl",
+        "delta_log_rmse": 0.0014129281044006348,
+        "sd": 0.00016301870346069336
+      },
+      {
+        "block": "labs",
+        "feature": "haematocrit",
+        "delta_log_rmse": 0.001150757074356079,
+        "sd": 0.00014510750770568848
+      },
+      {
+        "block": "anthro",
+        "feature": "waz",
+        "delta_log_rmse": 0.0011457204818725586,
+        "sd": 0.00123673677444458
+      },
+      {
+        "block": "tox",
+        "feature": "urinary_arsenic",
+        "delta_log_rmse": 0.0008876919746398926,
+        "sd": 0.0004767179489135742
+      },
+      {
+        "block": "tox",
+        "feature": "setting_industrial_runoff",
+        "delta_log_rmse": 0.0008025169372558594,
+        "sd": 0.00016927719116210938
+      },
+      {
+        "block": "tox",
+        "feature": "setting_mixed_periurban",
+        "delta_log_rmse": 0.0006528198719024658,
+        "sd": 3.17990779876709e-05
+      },
+      {
+        "block": "tox",
+        "feature": "setting_agricultural",
+        "delta_log_rmse": 0.000523000955581665,
+        "sd": 0.00027248263359069824
+      },
+      {
+        "block": "tox",
+        "feature": "water_nitrate",
+        "delta_log_rmse": 0.00048795342445373535,
+        "sd": 2.446770668029785e-05
+      },
+      {
+        "block": "tox",
+        "feature": "setting_fluoride_belt",
+        "delta_log_rmse": 0.0004641413688659668,
+        "sd": 0.00018739700317382812
+      },
+      {
+        "block": "labs",
+        "feature": "agp_g_l",
+        "delta_log_rmse": 0.00032851099967956543,
+        "sd": 3.9190053939819336e-05
+      },
+      {
+        "block": "tox",
+        "feature": "water_manganese",
+        "delta_log_rmse": -0.00043335556983947754,
+        "sd": 0.00020232796669006348
+      },
+      {
+        "block": "tox",
+        "feature": "water_fluoride",
+        "delta_log_rmse": -0.0006048381328582764,
+        "sd": 0.00034931302070617676
+      },
+      {
+        "block": "tox",
+        "feature": "water_cadmium",
+        "delta_log_rmse": -0.0007632076740264893,
+        "sd": 0.00022807717323303223
+      },
+      {
+        "block": "anthro",
+        "feature": "age_months",
+        "delta_log_rmse": -0.0007766485214233398,
+        "sd": 0.00032258033752441406
+      },
+      {
+        "block": "tox",
+        "feature": "blood_lead",
+        "delta_log_rmse": -0.0011794865131378174,
+        "sd": 0.00019571185111999512
+      },
+      {
+        "block": "anthro",
+        "feature": "log_weight",
+        "delta_log_rmse": -0.004471957683563232,
+        "sd": 0.0013030767440795898
+      },
+      {
+        "block": "anthro",
+        "feature": "height_cm",
+        "delta_log_rmse": -0.0055381059646606445,
+        "sd": 0.00017017126083374023
+      }
+    ],
+    "seconds": 241.20314002037048
+  },
+  "main_blackbox_conc_only": {
+    "run": "main_blackbox_conc_only",
+    "test": "main_test.npz",
+    "model_type": "blackbox",
+    "ablate_blocks": [],
+    "n_records": 5400,
+    "n_params": 640504,
+    "overall": {
+      "n": 269373,
+      "log_rmse": 1.0867782831192017,
+      "log_bias": 0.3388843834400177,
+      "median_fold_error": 1.2144312858581543,
+      "p90_fold_error": 2.006540298461914,
+      "within_1.25x": 0.5613480192892384,
+      "within_2x": 0.8995296484799887,
+      "r2_log": 0.9068973064422607
+    },
+    "by_nutrition": {
+      "adequate": {
+        "n": 60534,
+        "log_rmse": 0.9670934677124023,
+        "log_bias": 0.3102523684501648,
+        "median_fold_error": 1.2408027648925781,
+        "p90_fold_error": 1.829714059829712,
+        "within_1.25x": 0.5154293454917898,
+        "within_2x": 0.9138335480886774,
+        "r2_log": 0.9148504137992859,
+        "n_records": 1212
+      },
+      "mild": {
+        "n": 11226,
+        "log_rmse": 1.26255464553833,
+        "log_bias": 0.4077938199043274,
+        "median_fold_error": 1.2148008346557617,
+        "p90_fold_error": 2.4247236251831055,
+        "within_1.25x": 0.5569214323890967,
+        "within_2x": 0.8848209513629075,
+        "r2_log": 0.8850023746490479,
+        "n_records": 225
+      },
+      "moderate": {
+        "n": 45522,
+        "log_rmse": 1.0663000345230103,
+        "log_bias": 0.3336298167705536,
+        "median_fold_error": 1.2037990093231201,
+        "p90_fold_error": 1.8278162479400635,
+        "within_1.25x": 0.5854751548701727,
+        "within_2x": 0.9122841702912877,
+        "r2_log": 0.9060792922973633,
+        "n_records": 912
+      },
+      "severe_marasmic": {
+        "n": 125109,
+        "log_rmse": 1.1813205480575562,
+        "log_bias": 0.38207653164863586,
+        "median_fold_error": 1.201047658920288,
+        "p90_fold_error": 2.179748058319092,
+        "within_1.25x": 0.5868642543701892,
+        "within_2x": 0.8910470070098874,
+        "r2_log": 0.9015313982963562,
+        "n_records": 2511
+      },
+      "severe_oedematous": {
+        "n": 26982,
+        "log_rmse": 0.8005527257919312,
+        "log_bias": 0.18304383754730225,
+        "median_fold_error": 1.2457590103149414,
+        "p90_fold_error": 2.079770088195801,
+        "within_1.25x": 0.507189978504188,
+        "within_2x": 0.8913720257949744,
+        "r2_log": 0.9368317723274231,
+        "n_records": 540
+      }
+    },
+    "by_drug": {
+      "amoxicillin": {
+        "n": 27636,
+        "log_rmse": 1.8391482830047607,
+        "log_bias": 0.6972126960754395,
+        "median_fold_error": 1.266120433807373,
+        "p90_fold_error": 8.450034141540527,
+        "within_1.25x": 0.47658850774352296,
+        "within_2x": 0.7952670429874077,
+        "r2_log": 0.8115102052688599,
+        "n_records": 555
+      },
+      "ceftriaxone": {
+        "n": 30400,
+        "log_rmse": 0.1746683120727539,
+        "log_bias": 0.02244548127055168,
+        "median_fold_error": 1.1130051612854004,
+        "p90_fold_error": 1.319000005722046,
+        "within_1.25x": 0.8293421052631579,
+        "within_2x": 0.9980263157894737,
+        "r2_log": 0.9712620973587036,
+        "n_records": 608
+      },
+      "gentamicin": {
+        "n": 30450,
+        "log_rmse": 0.4170190393924713,
+        "log_bias": 0.20750907063484192,
+        "median_fold_error": 1.186558485031128,
+        "p90_fold_error": 1.4590864181518555,
+        "within_1.25x": 0.649688013136289,
+        "within_2x": 0.9427914614121511,
+        "r2_log": 0.9657698273658752,
+        "n_records": 609
+      },
+      "isoniazid": {
+        "n": 28010,
+        "log_rmse": 1.910555124282837,
+        "log_bias": 0.8274449706077576,
+        "median_fold_error": 1.3108601570129395,
+        "p90_fold_error": 16.38727378845215,
+        "within_1.25x": 0.42981078186362015,
+        "within_2x": 0.7477329525169583,
+        "r2_log": 0.805665910243988,
+        "n_records": 564
+      },
+      "rifampicin": {
+        "n": 31062,
+        "log_rmse": 1.5407171249389648,
+        "log_bias": 0.6106664538383484,
+        "median_fold_error": 1.3066208362579346,
+        "p90_fold_error": 6.22152853012085,
+        "within_1.25x": 0.43129869293670725,
+        "within_2x": 0.7903225806451613,
+        "r2_log": 0.8273769617080688,
+        "n_records": 626
+      },
+      "lumefantrine": {
+        "n": 30000,
+        "log_rmse": 0.3744426965713501,
+        "log_bias": 0.02366800606250763,
+        "median_fold_error": 1.181278944015503,
+        "p90_fold_error": 1.6013922691345215,
+        "within_1.25x": 0.6289666666666667,
+        "within_2x": 0.9588,
+        "r2_log": 0.9078676700592041,
+        "n_records": 600
+      },
+      "albendazole": {
+        "n": 30015,
+        "log_rmse": 1.0686039924621582,
+        "log_bias": 0.37343260645866394,
+        "median_fold_error": 1.293520212173462,
+        "p90_fold_error": 2.8724591732025146,
+        "within_1.25x": 0.4413126769948359,
+        "within_2x": 0.8488755622188906,
+        "r2_log": 0.8528976440429688,
+        "n_records": 602
+      },
+      "paracetamol": {
+        "n": 30750,
+        "log_rmse": 0.20314493775367737,
+        "log_bias": 0.09438885748386383,
+        "median_fold_error": 1.1408376693725586,
+        "p90_fold_error": 1.396125316619873,
+        "within_1.25x": 0.7386991869918699,
+        "within_2x": 0.997430894308943,
+        "r2_log": 0.9749276041984558,
+        "n_records": 615
+      },
+      "fluconazole": {
+        "n": 31050,
+        "log_rmse": 0.29621830582618713,
+        "log_bias": 0.25928518176078796,
+        "median_fold_error": 1.2878265380859375,
+        "p90_fold_error": 1.5519516468048096,
+        "within_1.25x": 0.4115942028985507,
+        "within_2x": 0.9943961352657005,
+        "r2_log": 0.9618631601333618,
+        "n_records": 621
+      }
+    },
+    "by_setting": {
+      "clean_municipal": {
+        "n": 59513,
+        "log_rmse": 1.1391006708145142,
+        "log_bias": 0.42307451367378235,
+        "median_fold_error": 1.2529536485671997,
+        "p90_fold_error": 2.2768545150756836,
+        "within_1.25x": 0.495572395947104,
+        "within_2x": 0.8845966427503235,
+        "r2_log": 0.9047309160232544,
+        "n_records": 1194
+      },
+      "mixed_periurban": {
+        "n": 77200,
+        "log_rmse": 1.0591760873794556,
+        "log_bias": 0.3138294816017151,
+        "median_fold_error": 1.1969571113586426,
+        "p90_fold_error": 1.9126238822937012,
+        "within_1.25x": 0.5959585492227979,
+        "within_2x": 0.9052590673575129,
+        "r2_log": 0.9126187562942505,
+        "n_records": 1548
+      },
+      "shallow_tubewell": {
+        "n": 45981,
+        "log_rmse": 1.0481454133987427,
+        "log_bias": 0.2746732831001282,
+        "median_fold_error": 1.1947306394577026,
+        "p90_fold_error": 1.8697056770324707,
+        "within_1.25x": 0.5953546029881908,
+        "within_2x": 0.9104847654465975,
+        "r2_log": 0.9066421985626221,
+        "n_records": 921
+      },
+      "fluoride_belt": {
+        "n": 26498,
+        "log_rmse": 1.0471278429031372,
+        "log_bias": 0.3234800398349762,
+        "median_fold_error": 1.2139527797698975,
+        "p90_fold_error": 1.9810446500778198,
+        "within_1.25x": 0.5618537248094195,
+        "within_2x": 0.9015397388482149,
+        "r2_log": 0.912032961845398,
+        "n_records": 531
+      },
+      "industrial_runoff": {
+        "n": 25777,
+        "log_rmse": 1.0557219982147217,
+        "log_bias": 0.3254266679286957,
+        "median_fold_error": 1.224802017211914,
+        "p90_fold_error": 1.9173780679702759,
+        "within_1.25x": 0.5457190518679443,
+        "within_2x": 0.9047212631415603,
+        "r2_log": 0.9024635553359985,
+        "n_records": 516
+      },
+      "agricultural": {
+        "n": 34404,
+        "log_rmse": 1.1566294431686401,
+        "log_bias": 0.3572371304035187,
+        "median_fold_error": 1.2123469114303589,
+        "p90_fold_error": 2.1249430179595947,
+        "within_1.25x": 0.5633356586443437,
+        "within_2x": 0.8924252993837926,
+        "r2_log": 0.8982140421867371,
+        "n_records": 690
+      }
+    },
+    "at_sampled_points": {
+      "n": 68600,
+      "log_rmse": 1.0348083972930908,
+      "log_bias": 0.3200303018093109,
+      "median_fold_error": 1.2153311967849731,
+      "p90_fold_error": 1.9709889888763428,
+      "within_1.25x": 0.559868804664723,
+      "within_2x": 0.9019825072886297,
+      "r2_log": 0.9108259081840515
+    },
+    "calibration": {
+      "epistemic_coverage_of_truth_50": 0.12287290212159503,
+      "total_coverage_of_observations_50": 0.5344721226428604,
+      "epistemic_coverage_of_truth_80": 0.23051727869746372,
+      "total_coverage_of_observations_80": 0.8329697967089813,
+      "epistemic_coverage_of_truth_90": 0.29278503807621975,
+      "total_coverage_of_observations_90": 0.9234884863302949,
+      "epistemic_coverage_of_truth_95": 0.34447680975312944,
+      "total_coverage_of_observations_95": 0.964337619434533,
+      "mean_epistemic_log_sd": 0.07401808080348102,
+      "mean_total_log_sd": 0.36421642249280756,
+      "calibrated_coverage_50": 0.5256766981417798,
+      "calibrated_coverage_80": 0.7847553920100849,
+      "calibrated_coverage_90": 0.854302939067108,
+      "calibrated_coverage_95": 0.8901767912984238
+    },
+    "epistemic_scale": 4.721993923187256,
+    "importance": [
+      {
+        "block": "anthro",
+        "feature": "oedema_grade",
+        "delta_log_rmse": 0.02893519401550293,
+        "sd": 0.0008199214935302734
+      },
+      {
+        "block": "anthro",
+        "feature": "male",
+        "delta_log_rmse": 0.018190443515777588,
+        "sd": 0.00024324655532836914
+      },
+      {
+        "block": "labs",
+        "feature": "albumin_g_l",
+        "delta_log_rmse": 0.009289860725402832,
+        "sd": 0.00044536590576171875
+      },
+      {
+        "block": "tox",
+        "feature": "water_arsenic",
+        "delta_log_rmse": 0.009175002574920654,
+        "sd": 0.00013130903244018555
+      },
+      {
+        "block": "anthro",
+        "feature": "weight_for_height_pct",
+        "delta_log_rmse": 0.00668257474899292,
+        "sd": 0.00040668249130249023
+      },
+      {
+        "block": "anthro",
+        "feature": "log_weight",
+        "delta_log_rmse": 0.0060059428215026855,
+        "sd": 0.00014144182205200195
+      },
+      {
+        "block": "anthro",
+        "feature": "whz",
+        "delta_log_rmse": 0.0044217705726623535,
+        "sd": 0.0002352595329284668
+      },
+      {
+        "block": "anthro",
+        "feature": "bmi",
+        "delta_log_rmse": 0.0037213563919067383,
+        "sd": 0.0004398822784423828
+      },
+      {
+        "block": "labs",
+        "feature": "haemoglobin_g_dl",
+        "delta_log_rmse": 0.002482891082763672,
+        "sd": 8.046627044677734e-05
+      },
+      {
+        "block": "anthro",
+        "feature": "haz",
+        "delta_log_rmse": 0.0023108720779418945,
+        "sd": 0.00012314319610595703
+      },
+      {
+        "block": "anthro",
+        "feature": "muac_mm",
+        "delta_log_rmse": 0.0021808743476867676,
+        "sd": 2.4974346160888672e-05
+      },
+      {
+        "block": "labs",
+        "feature": "crp_mg_l",
+        "delta_log_rmse": 0.001919865608215332,
+        "sd": 0.0006036758422851562
+      },
+      {
+        "block": "anthro",
+        "feature": "waz",
+        "delta_log_rmse": 0.001331627368927002,
+        "sd": 8.851289749145508e-05
+      },
+      {
+        "block": "tox",
+        "feature": "setting_shallow_tubewell",
+        "delta_log_rmse": 0.001271665096282959,
+        "sd": 5.2034854888916016e-05
+      },
+      {
+        "block": "anthro",
+        "feature": "height_cm",
+        "delta_log_rmse": 0.0010139942169189453,
+        "sd": 0.00013399124145507812
+      },
+      {
+        "block": "anthro",
+        "feature": "weight_kg",
+        "delta_log_rmse": 0.0009222030639648438,
+        "sd": 0.00024139881134033203
+      },
+      {
+        "block": "anthro",
+        "feature": "age_months",
+        "delta_log_rmse": 0.0004699826240539551,
+        "sd": 4.13060188293457e-05
+      },
+      {
+        "block": "tox",
+        "feature": "setting_fluoride_belt",
+        "delta_log_rmse": 0.00018835067749023438,
+        "sd": 0.0002714395523071289
+      },
+      {
+        "block": "tox",
+        "feature": "setting_mixed_periurban",
+        "delta_log_rmse": -0.00013595819473266602,
+        "sd": 6.157159805297852e-05
+      },
+      {
+        "block": "tox",
+        "feature": "water_cadmium",
+        "delta_log_rmse": -0.0001537799835205078,
+        "sd": 5.1975250244140625e-05
+      },
+      {
+        "block": "tox",
+        "feature": "water_fluoride",
+        "delta_log_rmse": -0.00026988983154296875,
+        "sd": 0.00016021728515625
+      },
+      {
+        "block": "tox",
+        "feature": "setting_clean_municipal",
+        "delta_log_rmse": -0.00033926963806152344,
+        "sd": 0.0002657175064086914
+      },
+      {
+        "block": "tox",
+        "feature": "setting_industrial_runoff",
+        "delta_log_rmse": -0.0003554224967956543,
+        "sd": 0.00027245283126831055
+      },
+      {
+        "block": "tox",
+        "feature": "setting_agricultural",
+        "delta_log_rmse": -0.0005106329917907715,
+        "sd": 0.00013178586959838867
+      },
+      {
+        "block": "tox",
+        "feature": "water_nitrate",
+        "delta_log_rmse": -0.0007370114326477051,
+        "sd": 0.00023573637008666992
+      },
+      {
+        "block": "tox",
+        "feature": "water_lead",
+        "delta_log_rmse": -0.0009077191352844238,
+        "sd": 0.00031763315200805664
+      },
+      {
+        "block": "labs",
+        "feature": "haematocrit",
+        "delta_log_rmse": -0.0011138319969177246,
+        "sd": 0.00010520219802856445
+      },
+      {
+        "block": "tox",
+        "feature": "water_manganese",
+        "delta_log_rmse": -0.002315521240234375,
+        "sd": 0.0002028942108154297
+      },
+      {
+        "block": "tox",
+        "feature": "urinary_arsenic",
+        "delta_log_rmse": -0.0028533339500427246,
+        "sd": 0.00016373395919799805
+      },
+      {
+        "block": "labs",
+        "feature": "agp_g_l",
+        "delta_log_rmse": -0.003851652145385742,
+        "sd": 0.0002148151397705078
+      },
+      {
+        "block": "tox",
+        "feature": "blood_lead",
+        "delta_log_rmse": -0.005808472633361816,
+        "sd": 7.069110870361328e-05
+      }
+    ],
+    "seconds": 53.851789474487305
+  },
+  "main_no_tox": {
+    "run": "main_no_tox",
+    "test": "main_test.npz",
+    "model_type": "hybrid",
+    "ablate_blocks": [
+      "tox"
+    ],
+    "n_records": 5400,
+    "n_params": 678707,
+    "overall": {
+      "n": 269373,
+      "log_rmse": 0.3885467052459717,
+      "log_bias": 0.04517357051372528,
+      "median_fold_error": 1.102825403213501,
+      "p90_fold_error": 1.6318238973617554,
+      "within_1.25x": 0.7569800982281075,
+      "within_2x": 0.9374658930182312,
+      "r2_log": 0.9869958758354187
+    },
+    "by_nutrition": {
+      "adequate": {
+        "n": 60534,
+        "log_rmse": 0.3186134099960327,
+        "log_bias": 0.022184258326888084,
+        "median_fold_error": 1.093263864517212,
+        "p90_fold_error": 1.4984205961227417,
+        "within_1.25x": 0.7996332639508376,
+        "within_2x": 0.9535963260316517,
+        "r2_log": 0.9897474646568298,
+        "n_records": 1212
+      },
+      "mild": {
+        "n": 11226,
+        "log_rmse": 0.43873319029808044,
+        "log_bias": 0.10615289956331253,
+        "median_fold_error": 1.1080669164657593,
+        "p90_fold_error": 1.8144710063934326,
+        "within_1.25x": 0.7380188847318725,
+        "within_2x": 0.9159985747372171,
+        "r2_log": 0.985403835773468,
+        "n_records": 225
+      },
+      "moderate": {
+        "n": 45522,
+        "log_rmse": 0.37381649017333984,
+        "log_bias": 0.030718818306922913,
+        "median_fold_error": 1.1036887168884277,
+        "p90_fold_error": 1.6702706813812256,
+        "within_1.25x": 0.743157154782303,
+        "within_2x": 0.9341417336672379,
+        "r2_log": 0.9872907400131226,
+        "n_records": 912
+      },
+      "severe_marasmic": {
+        "n": 125109,
+        "log_rmse": 0.41328856348991394,
+        "log_bias": 0.05927368998527527,
+        "median_fold_error": 1.1039330959320068,
+        "p90_fold_error": 1.6640642881393433,
+        "within_1.25x": 0.7543022484393609,
+        "within_2x": 0.9315636764741145,
+        "r2_log": 0.9868165254592896,
+        "n_records": 2511
+      },
+      "severe_oedematous": {
+        "n": 26982,
+        "log_rmse": 0.4142492413520813,
+        "log_bias": 0.030387336388230324,
+        "median_fold_error": 1.119103193283081,
+        "p90_fold_error": 1.671501874923706,
+        "within_1.25x": 0.7049143873693573,
+        "within_2x": 0.9431843451189682,
+        "r2_log": 0.9822491407394409,
+        "n_records": 540
+      }
+    },
+    "by_drug": {
+      "amoxicillin": {
+        "n": 27636,
+        "log_rmse": 0.46911680698394775,
+        "log_bias": 0.1593232899904251,
+        "median_fold_error": 1.1236937046051025,
+        "p90_fold_error": 2.0005667209625244,
+        "within_1.25x": 0.6835287306411927,
+        "within_2x": 0.8999131567520625,
+        "r2_log": 0.9873301386833191,
+        "n_records": 555
+      },
+      "ceftriaxone": {
+        "n": 30400,
+        "log_rmse": 0.10802546888589859,
+        "log_bias": -0.02034725435078144,
+        "median_fold_error": 1.048789381980896,
+        "p90_fold_error": 1.174741268157959,
+        "within_1.25x": 0.9501315789473684,
+        "within_2x": 0.999375,
+        "r2_log": 0.9892199039459229,
+        "n_records": 608
+      },
+      "gentamicin": {
+        "n": 30450,
+        "log_rmse": 0.15058520436286926,
+        "log_bias": -0.0402681864798069,
+        "median_fold_error": 1.040196418762207,
+        "p90_fold_error": 1.2060033082962036,
+        "within_1.25x": 0.9228571428571428,
+        "within_2x": 0.9909688013136289,
+        "r2_log": 0.9944919943809509,
+        "n_records": 609
+      },
+      "isoniazid": {
+        "n": 28010,
+        "log_rmse": 0.5972862839698792,
+        "log_bias": 0.10513859987258911,
+        "median_fold_error": 1.2389787435531616,
+        "p90_fold_error": 2.6736466884613037,
+        "within_1.25x": 0.5129953588004285,
+        "within_2x": 0.8252052838272046,
+        "r2_log": 0.9773463606834412,
+        "n_records": 564
+      },
+      "rifampicin": {
+        "n": 31062,
+        "log_rmse": 0.70407634973526,
+        "log_bias": 0.12978607416152954,
+        "median_fold_error": 1.2656357288360596,
+        "p90_fold_error": 2.9393868446350098,
+        "within_1.25x": 0.48119889253750564,
+        "within_2x": 0.8162384907604147,
+        "r2_log": 0.9586856961250305,
+        "n_records": 626
+      },
+      "lumefantrine": {
+        "n": 30000,
+        "log_rmse": 0.1933293491601944,
+        "log_bias": 0.06190924346446991,
+        "median_fold_error": 1.1129255294799805,
+        "p90_fold_error": 1.3432999849319458,
+        "within_1.25x": 0.819,
+        "within_2x": 0.9927666666666667,
+        "r2_log": 0.9778696894645691,
+        "n_records": 600
+      },
+      "albendazole": {
+        "n": 30015,
+        "log_rmse": 0.4459945857524872,
+        "log_bias": -0.08497514575719833,
+        "median_fold_error": 1.2212038040161133,
+        "p90_fold_error": 1.9553240537643433,
+        "within_1.25x": 0.5446610028319174,
+        "within_2x": 0.9055139097118108,
+        "r2_log": 0.9718711376190186,
+        "n_records": 602
+      },
+      "paracetamol": {
+        "n": 30750,
+        "log_rmse": 0.16797170042991638,
+        "log_bias": 0.055805254727602005,
+        "median_fold_error": 1.1190680265426636,
+        "p90_fold_error": 1.268257975578308,
+        "within_1.25x": 0.8768455284552845,
+        "within_2x": 0.9958373983739838,
+        "r2_log": 0.9805516004562378,
+        "n_records": 615
+      },
+      "fluconazole": {
+        "n": 31050,
+        "log_rmse": 0.07818110287189484,
+        "log_bias": 0.05188718065619469,
+        "median_fold_error": 1.0565367937088013,
+        "p90_fold_error": 1.1326090097427368,
+        "within_1.25x": 0.9931723027375201,
+        "within_2x": 1.0,
+        "r2_log": 0.9936427474021912,
+        "n_records": 621
+      }
+    },
+    "by_setting": {
+      "clean_municipal": {
+        "n": 59513,
+        "log_rmse": 0.432675838470459,
+        "log_bias": 0.19409985840320587,
+        "median_fold_error": 1.1201393604278564,
+        "p90_fold_error": 1.7165786027908325,
+        "within_1.25x": 0.7429469191605196,
+        "within_2x": 0.9257641187639676,
+        "r2_log": 0.9872640371322632,
+        "n_records": 1194
+      },
+      "mixed_periurban": {
+        "n": 77200,
+        "log_rmse": 0.3262794315814972,
+        "log_bias": 0.07784425467252731,
+        "median_fold_error": 1.0857794284820557,
+        "p90_fold_error": 1.475064754486084,
+        "within_1.25x": 0.8082642487046632,
+        "within_2x": 0.9532642487046632,
+        "r2_log": 0.9914273619651794,
+        "n_records": 1548
+      },
+      "shallow_tubewell": {
+        "n": 45981,
+        "log_rmse": 0.4521206021308899,
+        "log_bias": -0.12861381471157074,
+        "median_fold_error": 1.109959363937378,
+        "p90_fold_error": 1.803716778755188,
+        "within_1.25x": 0.7033992301167874,
+        "within_2x": 0.922033013636067,
+        "r2_log": 0.9828578233718872,
+        "n_records": 921
+      },
+      "fluoride_belt": {
+        "n": 26498,
+        "log_rmse": 0.3517850637435913,
+        "log_bias": 0.056880805641412735,
+        "median_fold_error": 1.1000206470489502,
+        "p90_fold_error": 1.5320404767990112,
+        "within_1.25x": 0.76990716280474,
+        "within_2x": 0.9490904973960299,
+        "r2_log": 0.9893112182617188,
+        "n_records": 531
+      },
+      "industrial_runoff": {
+        "n": 25777,
+        "log_rmse": 0.4265748858451843,
+        "log_bias": -0.1356518715620041,
+        "median_fold_error": 1.134742259979248,
+        "p90_fold_error": 1.8553966283798218,
+        "within_1.25x": 0.6794041199518951,
+        "within_2x": 0.916087985413353,
+        "r2_log": 0.9841832518577576,
+        "n_records": 516
+      },
+      "agricultural": {
+        "n": 34404,
+        "log_rmse": 0.33832794427871704,
+        "log_bias": 0.07297875732183456,
+        "median_fold_error": 1.0922958850860596,
+        "p90_fold_error": 1.5099287033081055,
+        "within_1.25x": 0.7859551214975002,
+        "within_2x": 0.9499476805022672,
+        "r2_log": 0.9908204078674316,
+        "n_records": 690
+      }
+    },
+    "at_sampled_points": {
+      "n": 68600,
+      "log_rmse": 0.39546921849250793,
+      "log_bias": 0.03872402757406235,
+      "median_fold_error": 1.10540771484375,
+      "p90_fold_error": 1.6464333534240723,
+      "within_1.25x": 0.7515597667638484,
+      "within_2x": 0.935597667638484,
+      "r2_log": 0.9857366681098938
+    },
+    "parameters": {
+      "CL": {
+        "log_rmse": 0.12253227829933167,
+        "median_fold_error": 1.0706533193588257,
+        "within_1.25x": 0.9333333333333333,
+        "r2_log": 0.9889642000198364
+      },
+      "V1": {
+        "log_rmse": 0.12110758572816849,
+        "median_fold_error": 1.062028408050537,
+        "within_1.25x": 0.9392592592592592,
+        "r2_log": 0.9744308590888977
+      },
+      "Q": {
+        "log_rmse": 0.1015399694442749,
+        "median_fold_error": 1.0662339925765991,
+        "within_1.25x": 0.9698148148148148,
+        "r2_log": 0.9634717702865601
+      },
+      "V2": {
+        "log_rmse": 0.14845356345176697,
+        "median_fold_error": 1.0874793529510498,
+        "within_1.25x": 0.9092592592592592,
+        "r2_log": 0.9822496175765991
+      },
+      "ka": {
+        "log_rmse": 0.09171058237552643,
+        "median_fold_error": 1.0645219087600708,
+        "within_1.25x": 0.9846999760937126,
+        "r2_log": 0.984047532081604
+      },
+      "F": {
+        "log_rmse": 0.10283257812261581,
+        "median_fold_error": 1.0817439556121826,
+        "within_1.25x": 0.9777777777777777,
+        "r2_log": 0.9889575839042664
+      },
+      "fu": {
+        "log_rmse": 0.07304274290800095,
+        "median_fold_error": 1.0266363620758057,
+        "within_1.25x": 0.9844444444444445,
+        "r2_log": 0.9978930354118347
+      }
+    },
+    "calibration": {
+      "epistemic_coverage_of_truth_50": 0.11051468434577946,
+      "total_coverage_of_observations_50": 0.5465029058593,
+      "epistemic_coverage_of_truth_80": 0.21002268516291434,
+      "total_coverage_of_observations_80": 0.8300590178254627,
+      "epistemic_coverage_of_truth_90": 0.2641935963509771,
+      "total_coverage_of_observations_90": 0.9130560392072758,
+      "epistemic_coverage_of_truth_95": 0.3097931249133334,
+      "total_coverage_of_observations_95": 0.9514960015478958,
+      "mean_epistemic_log_sd": 0.04508583654056896,
+      "mean_total_log_sd": 0.30210515043952246,
+      "calibrated_coverage_50": 0.5238605709666984,
+      "calibrated_coverage_80": 0.7726784927564679,
+      "calibrated_coverage_90": 0.8485939932567009,
+      "calibrated_coverage_95": 0.8930624667153387
+    },
+    "epistemic_scale": 5.444787979125977,
+    "importance": [
+      {
+        "block": "anthro",
+        "feature": "weight_kg",
+        "delta_log_rmse": 0.27297770977020264,
+        "sd": 0.00848621129989624
+      },
+      {
+        "block": "anthro",
+        "feature": "oedema_grade",
+        "delta_log_rmse": 0.13231948018074036,
+        "sd": 0.0025897324085235596
+      },
+      {
+        "block": "anthro",
+        "feature": "male",
+        "delta_log_rmse": 0.09876398742198944,
+        "sd": 0.0019787102937698364
+      },
+      {
+        "block": "labs",
+        "feature": "albumin_g_l",
+        "delta_log_rmse": 0.06584663689136505,
+        "sd": 0.005337163805961609
+      },
+      {
+        "block": "anthro",
+        "feature": "weight_for_height_pct",
+        "delta_log_rmse": 0.04539628326892853,
+        "sd": 0.0018879622220993042
+      },
+      {
+        "block": "anthro",
+        "feature": "whz",
+        "delta_log_rmse": 0.039913102984428406,
+        "sd": 0.0025594383478164673
+      },
+      {
+        "block": "anthro",
+        "feature": "bmi",
+        "delta_log_rmse": 0.019797921180725098,
+        "sd": 0.0017563700675964355
+      },
+      {
+        "block": "anthro",
+        "feature": "log_weight",
+        "delta_log_rmse": 0.016498476266860962,
+        "sd": 0.002061814069747925
+      },
+      {
+        "block": "labs",
+        "feature": "crp_mg_l",
+        "delta_log_rmse": 0.014584600925445557,
+        "sd": 0.0006379485130310059
+      },
+      {
+        "block": "labs",
+        "feature": "agp_g_l",
+        "delta_log_rmse": 0.010290786623954773,
+        "sd": 3.369152545928955e-05
+      },
+      {
+        "block": "anthro",
+        "feature": "waz",
+        "delta_log_rmse": 0.008666262030601501,
+        "sd": 0.0001439303159713745
+      },
+      {
+        "block": "anthro",
+        "feature": "haz",
+        "delta_log_rmse": 0.007558420300483704,
+        "sd": 0.0012410730123519897
+      },
+      {
+        "block": "anthro",
+        "feature": "age_months",
+        "delta_log_rmse": 0.006659522652626038,
+        "sd": 0.0011533647775650024
+      },
+      {
+        "block": "labs",
+        "feature": "haematocrit",
+        "delta_log_rmse": 0.006644323468208313,
+        "sd": 0.001956239342689514
+      },
+      {
+        "block": "anthro",
+        "feature": "height_cm",
+        "delta_log_rmse": 0.0005588680505752563,
+        "sd": 0.000433996319770813
+      },
+      {
+        "block": "tox",
+        "feature": "water_arsenic",
+        "delta_log_rmse": 0.0,
+        "sd": 0.0
+      },
+      {
+        "block": "tox",
+        "feature": "water_lead",
+        "delta_log_rmse": 0.0,
+        "sd": 0.0
+      },
+      {
+        "block": "tox",
+        "feature": "water_cadmium",
+        "delta_log_rmse": 0.0,
+        "sd": 0.0
+      },
+      {
+        "block": "tox",
+        "feature": "water_fluoride",
+        "delta_log_rmse": 0.0,
+        "sd": 0.0
+      },
+      {
+        "block": "tox",
+        "feature": "water_nitrate",
+        "delta_log_rmse": 0.0,
+        "sd": 0.0
+      },
+      {
+        "block": "tox",
+        "feature": "water_manganese",
+        "delta_log_rmse": 0.0,
+        "sd": 0.0
+      },
+      {
+        "block": "tox",
+        "feature": "blood_lead",
+        "delta_log_rmse": 0.0,
+        "sd": 0.0
+      },
+      {
+        "block": "tox",
+        "feature": "urinary_arsenic",
+        "delta_log_rmse": 0.0,
+        "sd": 0.0
+      },
+      {
+        "block": "tox",
+        "feature": "setting_clean_municipal",
+        "delta_log_rmse": 0.0,
+        "sd": 0.0
+      },
+      {
+        "block": "tox",
+        "feature": "setting_mixed_periurban",
+        "delta_log_rmse": 0.0,
+        "sd": 0.0
+      },
+      {
+        "block": "tox",
+        "feature": "setting_shallow_tubewell",
+        "delta_log_rmse": 0.0,
+        "sd": 0.0
+      },
+      {
+        "block": "tox",
+        "feature": "setting_fluoride_belt",
+        "delta_log_rmse": 0.0,
+        "sd": 0.0
+      },
+      {
+        "block": "tox",
+        "feature": "setting_industrial_runoff",
+        "delta_log_rmse": 0.0,
+        "sd": 0.0
+      },
+      {
+        "block": "tox",
+        "feature": "setting_agricultural",
+        "delta_log_rmse": 0.0,
+        "sd": 0.0
+      },
+      {
+        "block": "anthro",
+        "feature": "muac_mm",
+        "delta_log_rmse": -0.0010407119989395142,
+        "sd": 0.0007240921258926392
+      },
+      {
+        "block": "labs",
+        "feature": "haemoglobin_g_dl",
+        "delta_log_rmse": -0.00128173828125,
+        "sd": 0.0010749399662017822
+      }
+    ],
+    "seconds": 259.3521513938904
+  },
+  "main_no_labs": {
+    "run": "main_no_labs",
+    "test": "main_test.npz",
+    "model_type": "hybrid",
+    "ablate_blocks": [
+      "labs"
+    ],
+    "n_records": 5400,
+    "n_params": 678707,
+    "overall": {
+      "n": 269373,
+      "log_rmse": 0.25392451882362366,
+      "log_bias": 0.015017873607575893,
+      "median_fold_error": 1.062716007232666,
+      "p90_fold_error": 1.359626054763794,
+      "within_1.25x": 0.8434252876123443,
+      "within_2x": 0.974893549093636,
+      "r2_log": 0.9943895936012268
+    },
+    "by_nutrition": {
+      "adequate": {
+        "n": 60534,
+        "log_rmse": 0.19561772048473358,
+        "log_bias": 0.012649966403841972,
+        "median_fold_error": 1.0564136505126953,
+        "p90_fold_error": 1.2644273042678833,
+        "within_1.25x": 0.8914494333762844,
+        "within_2x": 0.9862226186936267,
+        "r2_log": 0.9961326718330383,
+        "n_records": 1212
+      },
+      "mild": {
+        "n": 11226,
+        "log_rmse": 0.2427162081003189,
+        "log_bias": 0.02317957580089569,
+        "median_fold_error": 1.0668607950210571,
+        "p90_fold_error": 1.365858554840088,
+        "within_1.25x": 0.842508462497773,
+        "within_2x": 0.9706039551042224,
+        "r2_log": 0.9952982664108276,
+        "n_records": 225
+      },
+      "moderate": {
+        "n": 45522,
+        "log_rmse": 0.2084106057882309,
+        "log_bias": 0.0022678780369460583,
+        "median_fold_error": 1.0574872493743896,
+        "p90_fold_error": 1.3059592247009277,
+        "within_1.25x": 0.8662624664997144,
+        "within_2x": 0.9839857651245552,
+        "r2_log": 0.9960231781005859,
+        "n_records": 912
+      },
+      "severe_marasmic": {
+        "n": 125109,
+        "log_rmse": 0.2866782248020172,
+        "log_bias": 0.025388767942786217,
+        "median_fold_error": 1.0647484064102173,
+        "p90_fold_error": 1.400878667831421,
+        "within_1.25x": 0.8295965917719749,
+        "within_2x": 0.96666906457569,
+        "r2_log": 0.993574321269989,
+        "n_records": 2511
+      },
+      "severe_oedematous": {
+        "n": 26982,
+        "log_rmse": 0.28106677532196045,
+        "log_bias": -0.009641948156058788,
+        "median_fold_error": 1.0880125761032104,
+        "p90_fold_error": 1.472532033920288,
+        "within_1.25x": 0.7616559187606553,
+        "within_2x": 0.9740567785931362,
+        "r2_log": 0.9917937517166138,
+        "n_records": 540
+      }
+    },
+    "by_drug": {
+      "amoxicillin": {
+        "n": 27636,
+        "log_rmse": 0.30478817224502563,
+        "log_bias": 0.05691844969987869,
+        "median_fold_error": 1.0886895656585693,
+        "p90_fold_error": 1.4643089771270752,
+        "within_1.25x": 0.7876320741062383,
+        "within_2x": 0.9617527862208713,
+        "r2_log": 0.9941653609275818,
+        "n_records": 555
+      },
+      "ceftriaxone": {
+        "n": 30400,
+        "log_rmse": 0.10959792137145996,
+        "log_bias": 0.0035036022309213877,
+        "median_fold_error": 1.0572073459625244,
+        "p90_fold_error": 1.1821926832199097,
+        "within_1.25x": 0.9493092105263158,
+        "within_2x": 0.9998026315789473,
+        "r2_log": 0.9885073900222778,
+        "n_records": 608
+      },
+      "gentamicin": {
+        "n": 30450,
+        "log_rmse": 0.05737924575805664,
+        "log_bias": -0.0077126771211624146,
+        "median_fold_error": 1.0207974910736084,
+        "p90_fold_error": 1.0751694440841675,
+        "within_1.25x": 0.9894252873563218,
+        "within_2x": 0.9998357963875205,
+        "r2_log": 0.999154269695282,
+        "n_records": 609
+      },
+      "isoniazid": {
+        "n": 28010,
+        "log_rmse": 0.27021875977516174,
+        "log_bias": 0.041844453662633896,
+        "median_fold_error": 1.0969910621643066,
+        "p90_fold_error": 1.4860765933990479,
+        "within_1.25x": 0.7722599071760086,
+        "within_2x": 0.9690110674759015,
+        "r2_log": 0.9953298568725586,
+        "n_records": 564
+      },
+      "rifampicin": {
+        "n": 31062,
+        "log_rmse": 0.47174376249313354,
+        "log_bias": 0.006574684754014015,
+        "median_fold_error": 1.1667481660842896,
+        "p90_fold_error": 1.9443124532699585,
+        "within_1.25x": 0.6323804004893439,
+        "within_2x": 0.9059622690103664,
+        "r2_log": 0.9808043837547302,
+        "n_records": 626
+      },
+      "lumefantrine": {
+        "n": 30000,
+        "log_rmse": 0.19358427822589874,
+        "log_bias": 0.03900685906410217,
+        "median_fold_error": 1.119128942489624,
+        "p90_fold_error": 1.3563750982284546,
+        "within_1.25x": 0.7917666666666666,
+        "within_2x": 0.9949,
+        "r2_log": 0.9762797355651855,
+        "n_records": 600
+      },
+      "albendazole": {
+        "n": 30015,
+        "log_rmse": 0.36636605858802795,
+        "log_bias": 0.02199672907590866,
+        "median_fold_error": 1.151757836341858,
+        "p90_fold_error": 1.690850019454956,
+        "within_1.25x": 0.6674662668665667,
+        "within_2x": 0.9415958687323005,
+        "r2_log": 0.980374813079834,
+        "n_records": 602
+      },
+      "paracetamol": {
+        "n": 30750,
+        "log_rmse": 0.07782568037509918,
+        "log_bias": -0.0042684972286224365,
+        "median_fold_error": 1.0451884269714355,
+        "p90_fold_error": 1.1302683353424072,
+        "within_1.25x": 0.9863739837398374,
+        "within_2x": 1.0,
+        "r2_log": 0.9953210949897766,
+        "n_records": 615
+      },
+      "fluconazole": {
+        "n": 31050,
+        "log_rmse": 0.03534556180238724,
+        "log_bias": -0.015288697555661201,
+        "median_fold_error": 1.022991418838501,
+        "p90_fold_error": 1.0593498945236206,
+        "within_1.25x": 1.0,
+        "within_2x": 1.0,
+        "r2_log": 0.9981122016906738,
+        "n_records": 621
+      }
+    },
+    "by_setting": {
+      "clean_municipal": {
+        "n": 59513,
+        "log_rmse": 0.244826078414917,
+        "log_bias": 0.027072738856077194,
+        "median_fold_error": 1.0583018064498901,
+        "p90_fold_error": 1.3541250228881836,
+        "within_1.25x": 0.8485709004755263,
+        "within_2x": 0.9763581066321644,
+        "r2_log": 0.9949572682380676,
+        "n_records": 1194
+      },
+      "mixed_periurban": {
+        "n": 77200,
+        "log_rmse": 0.24289441108703613,
+        "log_bias": 0.012348474003374577,
+        "median_fold_error": 1.0570178031921387,
+        "p90_fold_error": 1.3379572629928589,
+        "within_1.25x": 0.8566968911917099,
+        "within_2x": 0.9764378238341969,
+        "r2_log": 0.9949754476547241,
+        "n_records": 1548
+      },
+      "shallow_tubewell": {
+        "n": 45981,
+        "log_rmse": 0.26968950033187866,
+        "log_bias": 0.006638550665229559,
+        "median_fold_error": 1.0710395574569702,
+        "p90_fold_error": 1.3802484273910522,
+        "within_1.25x": 0.8293860507600965,
+        "within_2x": 0.9694439007416107,
+        "r2_log": 0.993367612361908,
+        "n_records": 921
+      },
+      "fluoride_belt": {
+        "n": 26498,
+        "log_rmse": 0.24824632704257965,
+        "log_bias": 0.019319454208016396,
+        "median_fold_error": 1.0662517547607422,
+        "p90_fold_error": 1.3725956678390503,
+        "within_1.25x": 0.828741791833346,
+        "within_2x": 0.9766397463959544,
+        "r2_log": 0.9945673942565918,
+        "n_records": 531
+      },
+      "industrial_runoff": {
+        "n": 25777,
+        "log_rmse": 0.25926271080970764,
+        "log_bias": 0.015750570222735405,
+        "median_fold_error": 1.0756491422653198,
+        "p90_fold_error": 1.3811962604522705,
+        "within_1.25x": 0.8280249835124336,
+        "within_2x": 0.9759087558676339,
+        "r2_log": 0.9935240745544434,
+        "n_records": 516
+      },
+      "agricultural": {
+        "n": 34404,
+        "log_rmse": 0.2715422213077545,
+        "log_bias": 0.007491891738027334,
+        "median_fold_error": 1.0622245073318481,
+        "p90_fold_error": 1.361057996749878,
+        "within_1.25x": 0.84635507499128,
+        "within_2x": 0.9740727822346239,
+        "r2_log": 0.9938029646873474,
+        "n_records": 690
+      }
+    },
+    "at_sampled_points": {
+      "n": 68600,
+      "log_rmse": 0.2483060657978058,
+      "log_bias": 0.01297086849808693,
+      "median_fold_error": 1.064283847808838,
+      "p90_fold_error": 1.363338589668274,
+      "within_1.25x": 0.8404956268221574,
+      "within_2x": 0.9754956268221574,
+      "r2_log": 0.9943380355834961
+    },
+    "parameters": {
+      "CL": {
+        "log_rmse": 0.1021057590842247,
+        "median_fold_error": 1.059478998184204,
+        "within_1.25x": 0.9681481481481482,
+        "r2_log": 0.9923983216285706
+      },
+      "V1": {
+        "log_rmse": 0.12614858150482178,
+        "median_fold_error": 1.0614616870880127,
+        "within_1.25x": 0.9201851851851852,
+        "r2_log": 0.9720314145088196
+      },
+      "Q": {
+        "log_rmse": 0.07752463221549988,
+        "median_fold_error": 1.0555448532104492,
+        "within_1.25x": 0.997037037037037,
+        "r2_log": 0.9782337546348572
+      },
+      "V2": {
+        "log_rmse": 0.14390455186367035,
+        "median_fold_error": 1.0716694593429565,
+        "within_1.25x": 0.9174074074074074,
+        "r2_log": 0.9825886487960815
+      },
+      "ka": {
+        "log_rmse": 0.0843067467212677,
+        "median_fold_error": 1.0582517385482788,
+        "within_1.25x": 0.9909156108056418,
+        "r2_log": 0.9856666326522827
+      },
+      "F": {
+        "log_rmse": 0.0982784852385521,
+        "median_fold_error": 1.0800533294677734,
+        "within_1.25x": 0.9885185185185185,
+        "r2_log": 0.9897921681404114
+      },
+      "fu": {
+        "log_rmse": 0.09832343459129333,
+        "median_fold_error": 1.0258469581604004,
+        "within_1.25x": 0.9431481481481482,
+        "r2_log": 0.9962350726127625
+      }
+    },
+    "calibration": {
+      "epistemic_coverage_of_truth_50": 0.170493067881609,
+      "total_coverage_of_observations_50": 0.5076654215444769,
+      "epistemic_coverage_of_truth_80": 0.3140443556245216,
+      "total_coverage_of_observations_80": 0.8009904805244266,
+      "epistemic_coverage_of_truth_90": 0.3881407972937064,
+      "total_coverage_of_observations_90": 0.8958613015975534,
+      "epistemic_coverage_of_truth_95": 0.4456091823028101,
+      "total_coverage_of_observations_95": 0.9427309794970283,
+      "mean_epistemic_log_sd": 0.04265124655582688,
+      "mean_total_log_sd": 0.23985118080269208,
+      "calibrated_coverage_50": 0.5397571792776994,
+      "calibrated_coverage_80": 0.7793839030590242,
+      "calibrated_coverage_90": 0.8555937480863878,
+      "calibrated_coverage_95": 0.8967736509220241
+    },
+    "epistemic_scale": 3.860589027404785,
+    "importance": [
+      {
+        "block": "anthro",
+        "feature": "weight_kg",
+        "delta_log_rmse": 0.33798471093177795,
+        "sd": 0.007757782936096191
+      },
+      {
+        "block": "anthro",
+        "feature": "oedema_grade",
+        "delta_log_rmse": 0.22758789360523224,
+        "sd": 0.006687089800834656
+      },
+      {
+        "block": "anthro",
+        "feature": "male",
+        "delta_log_rmse": 0.1678890585899353,
+        "sd": 0.0031520426273345947
+      },
+      {
+        "block": "tox",
+        "feature": "water_arsenic",
+        "delta_log_rmse": 0.1448206603527069,
+        "sd": 0.00031745433807373047
+      },
+      {
+        "block": "anthro",
+        "feature": "weight_for_height_pct",
+        "delta_log_rmse": 0.049379199743270874,
+        "sd": 0.002924680709838867
+      },
+      {
+        "block": "tox",
+        "feature": "water_lead",
+        "delta_log_rmse": 0.04162672162055969,
+        "sd": 0.001123964786529541
+      },
+      {
+        "block": "anthro",
+        "feature": "whz",
+        "delta_log_rmse": 0.04071299731731415,
+        "sd": 0.001698419451713562
+      },
+      {
+        "block": "anthro",
+        "feature": "log_weight",
+        "delta_log_rmse": 0.036792904138565063,
+        "sd": 0.001631319522857666
+      },
+      {
+        "block": "anthro",
+        "feature": "bmi",
+        "delta_log_rmse": 0.025843515992164612,
+        "sd": 0.0031080693006515503
+      },
+      {
+        "block": "anthro",
+        "feature": "haz",
+        "delta_log_rmse": 0.019088923931121826,
+        "sd": 0.0010252296924591064
+      },
+      {
+        "block": "tox",
+        "feature": "water_cadmium",
+        "delta_log_rmse": 0.017049431800842285,
+        "sd": 0.0010825693607330322
+      },
+      {
+        "block": "anthro",
+        "feature": "waz",
+        "delta_log_rmse": 0.008403465151786804,
+        "sd": 0.0013543516397476196
+      },
+      {
+        "block": "anthro",
+        "feature": "age_months",
+        "delta_log_rmse": 0.008019313216209412,
+        "sd": 0.0002648979425430298
+      },
+      {
+        "block": "anthro",
+        "feature": "muac_mm",
+        "delta_log_rmse": 0.004990905523300171,
+        "sd": 6.133317947387695e-05
+      },
+      {
+        "block": "tox",
+        "feature": "setting_clean_municipal",
+        "delta_log_rmse": 0.004226163029670715,
+        "sd": 2.0012259483337402e-05
+      },
+      {
+        "block": "tox",
+        "feature": "water_manganese",
+        "delta_log_rmse": 0.004057794809341431,
+        "sd": 0.00028508901596069336
+      },
+      {
+        "block": "tox",
+        "feature": "setting_industrial_runoff",
+        "delta_log_rmse": 0.003130316734313965,
+        "sd": 0.0002663731575012207
+      },
+      {
+        "block": "tox",
+        "feature": "urinary_arsenic",
+        "delta_log_rmse": 0.0026691555976867676,
+        "sd": 0.0003681480884552002
+      },
+      {
+        "block": "anthro",
+        "feature": "height_cm",
+        "delta_log_rmse": 0.0019446313381195068,
+        "sd": 0.0002276599407196045
+      },
+      {
+        "block": "tox",
+        "feature": "setting_fluoride_belt",
+        "delta_log_rmse": 0.0019189715385437012,
+        "sd": 0.00028458237648010254
+      },
+      {
+        "block": "tox",
+        "feature": "blood_lead",
+        "delta_log_rmse": 0.0018276721239089966,
+        "sd": 3.732740879058838e-05
+      },
+      {
+        "block": "tox",
+        "feature": "setting_shallow_tubewell",
+        "delta_log_rmse": 0.0005832016468048096,
+        "sd": 0.0005218684673309326
+      },
+      {
+        "block": "labs",
+        "feature": "albumin_g_l",
+        "delta_log_rmse": 0.0,
+        "sd": 0.0
+      },
+      {
+        "block": "labs",
+        "feature": "agp_g_l",
+        "delta_log_rmse": 0.0,
+        "sd": 0.0
+      },
+      {
+        "block": "labs",
+        "feature": "crp_mg_l",
+        "delta_log_rmse": 0.0,
+        "sd": 0.0
+      },
+      {
+        "block": "labs",
+        "feature": "haemoglobin_g_dl",
+        "delta_log_rmse": 0.0,
+        "sd": 0.0
+      },
+      {
+        "block": "labs",
+        "feature": "haematocrit",
+        "delta_log_rmse": 0.0,
+        "sd": 0.0
+      },
+      {
+        "block": "tox",
+        "feature": "water_nitrate",
+        "delta_log_rmse": -0.0007228106260299683,
+        "sd": 0.00014413893222808838
+      },
+      {
+        "block": "tox",
+        "feature": "setting_agricultural",
+        "delta_log_rmse": -0.0008901357650756836,
+        "sd": 0.0004197657108306885
+      },
+      {
+        "block": "tox",
+        "feature": "water_fluoride",
+        "delta_log_rmse": -0.0013502687215805054,
+        "sd": 0.0009639710187911987
+      },
+      {
+        "block": "tox",
+        "feature": "setting_mixed_periurban",
+        "delta_log_rmse": -0.0015836060047149658,
+        "sd": 0.0005049407482147217
+      }
+    ],
+    "seconds": 257.24239134788513
+  },
+  "main_anthro_only": {
+    "run": "main_anthro_only",
+    "test": "main_test.npz",
+    "model_type": "hybrid",
+    "ablate_blocks": [
+      "tox",
+      "labs"
+    ],
+    "n_records": 5400,
+    "n_params": 678707,
+    "overall": {
+      "n": 269373,
+      "log_rmse": 0.4145677983760834,
+      "log_bias": 0.027227744460105896,
+      "median_fold_error": 1.099631428718567,
+      "p90_fold_error": 1.6676888465881348,
+      "within_1.25x": 0.7426134022340769,
+      "within_2x": 0.9342287460138915,
+      "r2_log": 0.9850576519966125
+    },
+    "by_nutrition": {
+      "adequate": {
+        "n": 60534,
+        "log_rmse": 0.3534180819988251,
+        "log_bias": -0.01100090891122818,
+        "median_fold_error": 1.0887243747711182,
+        "p90_fold_error": 1.5595096349716187,
+        "within_1.25x": 0.7790993491261109,
+        "within_2x": 0.9463607228995276,
+        "r2_log": 0.9873360395431519,
+        "n_records": 1212
+      },
+      "mild": {
+        "n": 11226,
+        "log_rmse": 0.4539158344268799,
+        "log_bias": 0.07119011878967285,
+        "median_fold_error": 1.0988810062408447,
+        "p90_fold_error": 1.7257274389266968,
+        "within_1.25x": 0.7539640121147336,
+        "within_2x": 0.9238375200427579,
+        "r2_log": 0.9838128089904785,
+        "n_records": 225
+      },
+      "moderate": {
+        "n": 45522,
+        "log_rmse": 0.42865490913391113,
+        "log_bias": 0.014777353964745998,
+        "median_fold_error": 1.102847695350647,
+        "p90_fold_error": 1.679727554321289,
+        "within_1.25x": 0.7380826852950222,
+        "within_2x": 0.9328236896445674,
+        "r2_log": 0.9831947088241577,
+        "n_records": 912
+      },
+      "severe_marasmic": {
+        "n": 125109,
+        "log_rmse": 0.44501933455467224,
+        "log_bias": 0.05412745103240013,
+        "median_fold_error": 1.1019493341445923,
+        "p90_fold_error": 1.717786192893982,
+        "within_1.25x": 0.7339360078011974,
+        "within_2x": 0.9264081720739515,
+        "r2_log": 0.9846243262290955,
+        "n_records": 2511
+      },
+      "severe_oedematous": {
+        "n": 26982,
+        "log_rmse": 0.3487071394920349,
+        "log_bias": -0.009019250981509686,
+        "median_fold_error": 1.1135234832763672,
+        "p90_fold_error": 1.6507561206817627,
+        "within_1.25x": 0.7039137202579497,
+        "within_2x": 0.9499666444296198,
+        "r2_log": 0.987362265586853,
+        "n_records": 540
+      }
+    },
+    "by_drug": {
+      "amoxicillin": {
+        "n": 27636,
+        "log_rmse": 0.3688679039478302,
+        "log_bias": -0.012053189799189568,
+        "median_fold_error": 1.118204116821289,
+        "p90_fold_error": 1.6931251287460327,
+        "within_1.25x": 0.7031408308004052,
+        "within_2x": 0.9372195686785353,
+        "r2_log": 0.991154670715332,
+        "n_records": 555
+      },
+      "ceftriaxone": {
+        "n": 30400,
+        "log_rmse": 0.11593425273895264,
+        "log_bias": 0.013905459083616734,
+        "median_fold_error": 1.0608298778533936,
+        "p90_fold_error": 1.2017863988876343,
+        "within_1.25x": 0.936546052631579,
+        "within_2x": 0.9995065789473684,
+        "r2_log": 0.9873121380805969,
+        "n_records": 608
+      },
+      "gentamicin": {
+        "n": 30450,
+        "log_rmse": 0.14752870798110962,
+        "log_bias": 0.023676477372646332,
+        "median_fold_error": 1.0498027801513672,
+        "p90_fold_error": 1.2228565216064453,
+        "within_1.25x": 0.9151724137931034,
+        "within_2x": 0.9942200328407225,
+        "r2_log": 0.9944528341293335,
+        "n_records": 609
+      },
+      "isoniazid": {
+        "n": 28010,
+        "log_rmse": 0.6575533747673035,
+        "log_bias": 0.13348089158535004,
+        "median_fold_error": 1.2597291469573975,
+        "p90_fold_error": 3.022686004638672,
+        "within_1.25x": 0.49096751160299895,
+        "within_2x": 0.8006783291681542,
+        "r2_log": 0.9728337526321411,
+        "n_records": 564
+      },
+      "rifampicin": {
+        "n": 31062,
+        "log_rmse": 0.7786338329315186,
+        "log_bias": 0.051813557744026184,
+        "median_fold_error": 1.3009746074676514,
+        "p90_fold_error": 3.205916404724121,
+        "within_1.25x": 0.44662288326572663,
+        "within_2x": 0.8004957826282918,
+        "r2_log": 0.9479268789291382,
+        "n_records": 626
+      },
+      "lumefantrine": {
+        "n": 30000,
+        "log_rmse": 0.23122002184391022,
+        "log_bias": 0.014306937344372272,
+        "median_fold_error": 1.1221849918365479,
+        "p90_fold_error": 1.4175207614898682,
+        "within_1.25x": 0.7743,
+        "within_2x": 0.9825333333333334,
+        "r2_log": 0.9648630023002625,
+        "n_records": 600
+      },
+      "albendazole": {
+        "n": 30015,
+        "log_rmse": 0.5144244432449341,
+        "log_bias": -0.024861622601747513,
+        "median_fold_error": 1.2325935363769531,
+        "p90_fold_error": 2.1012074947357178,
+        "within_1.25x": 0.5250041645843745,
+        "within_2x": 0.8888888888888888,
+        "r2_log": 0.9612582921981812,
+        "n_records": 602
+      },
+      "paracetamol": {
+        "n": 30750,
+        "log_rmse": 0.16980555653572083,
+        "log_bias": 0.033639028668403625,
+        "median_fold_error": 1.1037061214447021,
+        "p90_fold_error": 1.2849328517913818,
+        "within_1.25x": 0.866959349593496,
+        "within_2x": 0.9950569105691057,
+        "r2_log": 0.9785354137420654,
+        "n_records": 615
+      },
+      "fluconazole": {
+        "n": 31050,
+        "log_rmse": 0.05332277715206146,
+        "log_bias": 0.014757734723389149,
+        "median_fold_error": 1.0334770679473877,
+        "p90_fold_error": 1.0878130197525024,
+        "within_1.25x": 0.9983574879227053,
+        "within_2x": 1.0,
+        "r2_log": 0.995119571685791,
+        "n_records": 621
+      }
+    },
+    "by_setting": {
+      "clean_municipal": {
+        "n": 59513,
+        "log_rmse": 0.4573418200016022,
+        "log_bias": 0.17721974849700928,
+        "median_fold_error": 1.107308268547058,
+        "p90_fold_error": 1.6808257102966309,
+        "within_1.25x": 0.7545578277015106,
+        "within_2x": 0.929040713793625,
+        "r2_log": 0.9848604202270508,
+        "n_records": 1194
+      },
+      "mixed_periurban": {
+        "n": 77200,
+        "log_rmse": 0.36238041520118713,
+        "log_bias": 0.06443896144628525,
+        "median_fold_error": 1.0843182802200317,
+        "p90_fold_error": 1.505703330039978,
+        "within_1.25x": 0.789300518134715,
+        "within_2x": 0.950919689119171,
+        "r2_log": 0.9891417026519775,
+        "n_records": 1548
+      },
+      "shallow_tubewell": {
+        "n": 45981,
+        "log_rmse": 0.473050057888031,
+        "log_bias": -0.15404276549816132,
+        "median_fold_error": 1.1167397499084473,
+        "p90_fold_error": 1.90108060836792,
+        "within_1.25x": 0.6713642591505187,
+        "within_2x": 0.9098323220460625,
+        "r2_log": 0.9817468523979187,
+        "n_records": 921
+      },
+      "fluoride_belt": {
+        "n": 26498,
+        "log_rmse": 0.3708510100841522,
+        "log_bias": 0.04591720178723335,
+        "median_fold_error": 1.0931141376495361,
+        "p90_fold_error": 1.5508296489715576,
+        "within_1.25x": 0.758623292323949,
+        "within_2x": 0.9450524567891916,
+        "r2_log": 0.9879893064498901,
+        "n_records": 531
+      },
+      "industrial_runoff": {
+        "n": 25777,
+        "log_rmse": 0.4511432945728302,
+        "log_bias": -0.15900620818138123,
+        "median_fold_error": 1.1402615308761597,
+        "p90_fold_error": 1.8816627264022827,
+        "within_1.25x": 0.6480971408620088,
+        "within_2x": 0.9150793342902588,
+        "r2_log": 0.982763409614563,
+        "n_records": 516
+      },
+      "agricultural": {
+        "n": 34404,
+        "log_rmse": 0.3628782629966736,
+        "log_bias": 0.05167662352323532,
+        "median_fold_error": 1.0900566577911377,
+        "p90_fold_error": 1.5518125295639038,
+        "within_1.25x": 0.7708987327054994,
+        "within_2x": 0.9443669340774329,
+        "r2_log": 0.9891491532325745,
+        "n_records": 690
+      }
+    },
+    "at_sampled_points": {
+      "n": 68600,
+      "log_rmse": 0.40459731221199036,
+      "log_bias": 0.019140219315886497,
+      "median_fold_error": 1.1036852598190308,
+      "p90_fold_error": 1.6625237464904785,
+      "within_1.25x": 0.7380174927113703,
+      "within_2x": 0.9357288629737609,
+      "r2_log": 0.9849598407745361
+    },
+    "parameters": {
+      "CL": {
+        "log_rmse": 0.1480589210987091,
+        "median_fold_error": 1.0768201351165771,
+        "within_1.25x": 0.8890740740740741,
+        "r2_log": 0.9853901267051697
+      },
+      "V1": {
+        "log_rmse": 0.1319577693939209,
+        "median_fold_error": 1.0628738403320312,
+        "within_1.25x": 0.9183333333333333,
+        "r2_log": 0.969499945640564
+      },
+      "Q": {
+        "log_rmse": 0.12439102679491043,
+        "median_fold_error": 1.074699878692627,
+        "within_1.25x": 0.9274074074074075,
+        "r2_log": 0.9551598429679871
+      },
+      "V2": {
+        "log_rmse": 0.1591975837945938,
+        "median_fold_error": 1.0956088304519653,
+        "within_1.25x": 0.8977777777777778,
+        "r2_log": 0.978821873664856
+      },
+      "ka": {
+        "log_rmse": 0.09542766958475113,
+        "median_fold_error": 1.0675058364868164,
+        "within_1.25x": 0.9792015300023906,
+        "r2_log": 0.9832389950752258
+      },
+      "F": {
+        "log_rmse": 0.10676614940166473,
+        "median_fold_error": 1.0865721702575684,
+        "within_1.25x": 0.9844444444444445,
+        "r2_log": 0.9880198836326599
+      },
+      "fu": {
+        "log_rmse": 0.09550168365240097,
+        "median_fold_error": 1.0362379550933838,
+        "within_1.25x": 0.9555555555555556,
+        "r2_log": 0.996649980545044
+      }
+    },
+    "calibration": {
+      "epistemic_coverage_of_truth_50": 0.10345631859433127,
+      "total_coverage_of_observations_50": 0.532769509476188,
+      "epistemic_coverage_of_truth_80": 0.19493474789558055,
+      "total_coverage_of_observations_80": 0.8171095858225094,
+      "epistemic_coverage_of_truth_90": 0.245879929150183,
+      "total_coverage_of_observations_90": 0.9023528643886984,
+      "epistemic_coverage_of_truth_95": 0.28905978991088116,
+      "total_coverage_of_observations_95": 0.9450264927016683,
+      "mean_epistemic_log_sd": 0.03818078711628914,
+      "mean_total_log_sd": 0.30557182973081415,
+      "calibrated_coverage_50": 0.5434199713678171,
+      "calibrated_coverage_80": 0.7685868701251916,
+      "calibrated_coverage_90": 0.842981748583858,
+      "calibrated_coverage_95": 0.8857183054964708
+    },
+    "epistemic_scale": 6.529139995574951,
+    "importance": [
+      {
+        "block": "anthro",
+        "feature": "weight_kg",
+        "delta_log_rmse": 0.26823243498802185,
+        "sd": 0.008851766586303711
+      },
+      {
+        "block": "anthro",
+        "feature": "oedema_grade",
+        "delta_log_rmse": 0.1511642336845398,
+        "sd": 0.004764527082443237
+      },
+      {
+        "block": "anthro",
+        "feature": "male",
+        "delta_log_rmse": 0.09571456909179688,
+        "sd": 0.002045363187789917
+      },
+      {
+        "block": "anthro",
+        "feature": "weight_for_height_pct",
+        "delta_log_rmse": 0.04038122296333313,
+        "sd": 0.0013867020606994629
+      },
+      {
+        "block": "anthro",
+        "feature": "whz",
+        "delta_log_rmse": 0.03796611726284027,
+        "sd": 0.0016616731882095337
+      },
+      {
+        "block": "anthro",
+        "feature": "log_weight",
+        "delta_log_rmse": 0.024173542857170105,
+        "sd": 0.0019151121377944946
+      },
+      {
+        "block": "anthro",
+        "feature": "bmi",
+        "delta_log_rmse": 0.020989716053009033,
+        "sd": 0.0017443597316741943
+      },
+      {
+        "block": "anthro",
+        "feature": "waz",
+        "delta_log_rmse": 0.011066898703575134,
+        "sd": 8.942186832427979e-05
+      },
+      {
+        "block": "anthro",
+        "feature": "haz",
+        "delta_log_rmse": 0.010431453585624695,
+        "sd": 0.0011707395315170288
+      },
+      {
+        "block": "anthro",
+        "feature": "age_months",
+        "delta_log_rmse": 0.004922971129417419,
+        "sd": 0.0011618584394454956
+      },
+      {
+        "block": "anthro",
+        "feature": "muac_mm",
+        "delta_log_rmse": 0.004244565963745117,
+        "sd": 0.0012944340705871582
+      },
+      {
+        "block": "anthro",
+        "feature": "height_cm",
+        "delta_log_rmse": 0.0021062344312667847,
+        "sd": 2.2873282432556152e-05
+      },
+      {
+        "block": "labs",
+        "feature": "albumin_g_l",
+        "delta_log_rmse": 0.0,
+        "sd": 0.0
+      },
+      {
+        "block": "labs",
+        "feature": "agp_g_l",
+        "delta_log_rmse": 0.0,
+        "sd": 0.0
+      },
+      {
+        "block": "labs",
+        "feature": "crp_mg_l",
+        "delta_log_rmse": 0.0,
+        "sd": 0.0
+      },
+      {
+        "block": "labs",
+        "feature": "haemoglobin_g_dl",
+        "delta_log_rmse": 0.0,
+        "sd": 0.0
+      },
+      {
+        "block": "labs",
+        "feature": "haematocrit",
+        "delta_log_rmse": 0.0,
+        "sd": 0.0
+      },
+      {
+        "block": "tox",
+        "feature": "water_arsenic",
+        "delta_log_rmse": 0.0,
+        "sd": 0.0
+      },
+      {
+        "block": "tox",
+        "feature": "water_lead",
+        "delta_log_rmse": 0.0,
+        "sd": 0.0
+      },
+      {
+        "block": "tox",
+        "feature": "water_cadmium",
+        "delta_log_rmse": 0.0,
+        "sd": 0.0
+      },
+      {
+        "block": "tox",
+        "feature": "water_fluoride",
+        "delta_log_rmse": 0.0,
+        "sd": 0.0
+      },
+      {
+        "block": "tox",
+        "feature": "water_nitrate",
+        "delta_log_rmse": 0.0,
+        "sd": 0.0
+      },
+      {
+        "block": "tox",
+        "feature": "water_manganese",
+        "delta_log_rmse": 0.0,
+        "sd": 0.0
+      },
+      {
+        "block": "tox",
+        "feature": "blood_lead",
+        "delta_log_rmse": 0.0,
+        "sd": 0.0
+      },
+      {
+        "block": "tox",
+        "feature": "urinary_arsenic",
+        "delta_log_rmse": 0.0,
+        "sd": 0.0
+      },
+      {
+        "block": "tox",
+        "feature": "setting_clean_municipal",
+        "delta_log_rmse": 0.0,
+        "sd": 0.0
+      },
+      {
+        "block": "tox",
+        "feature": "setting_mixed_periurban",
+        "delta_log_rmse": 0.0,
+        "sd": 0.0
+      },
+      {
+        "block": "tox",
+        "feature": "setting_shallow_tubewell",
+        "delta_log_rmse": 0.0,
+        "sd": 0.0
+      },
+      {
+        "block": "tox",
+        "feature": "setting_fluoride_belt",
+        "delta_log_rmse": 0.0,
+        "sd": 0.0
+      },
+      {
+        "block": "tox",
+        "feature": "setting_industrial_runoff",
+        "delta_log_rmse": 0.0,
+        "sd": 0.0
+      },
+      {
+        "block": "tox",
+        "feature": "setting_agricultural",
+        "delta_log_rmse": 0.0,
+        "sd": 0.0
+      }
+    ],
+    "seconds": 263.5524046421051
+  },
+  "setting_hybrid": {
+    "run": "setting_hybrid",
+    "test": "setting_test.npz",
+    "model_type": "hybrid",
+    "ablate_blocks": [],
+    "n_records": 3600,
+    "n_params": 678707,
+    "overall": {
+      "n": 179799,
+      "log_rmse": 0.8549127578735352,
+      "log_bias": -0.1667182743549347,
+      "median_fold_error": 1.4372059106826782,
+      "p90_fold_error": 3.096100091934204,
+      "within_1.25x": 0.32361136602539503,
+      "within_2x": 0.7486248533084167,
+      "r2_log": 0.9333232641220093
+    },
+    "by_nutrition": {
+      "adequate": {
+        "n": 39288,
+        "log_rmse": 0.7940826416015625,
+        "log_bias": -0.2425808608531952,
+        "median_fold_error": 1.4051811695098877,
+        "p90_fold_error": 3.3860020637512207,
+        "within_1.25x": 0.36061901852983097,
+        "within_2x": 0.7336845856241091,
+        "r2_log": 0.9391533136367798,
+        "n_records": 786
+      },
+      "mild": {
+        "n": 4500,
+        "log_rmse": 0.8297380208969116,
+        "log_bias": -0.27967405319213867,
+        "median_fold_error": 1.4436191320419312,
+        "p90_fold_error": 3.0214338302612305,
+        "within_1.25x": 0.30444444444444446,
+        "within_2x": 0.7595555555555555,
+        "r2_log": 0.9429603219032288,
+        "n_records": 90
+      },
+      "moderate": {
+        "n": 33424,
+        "log_rmse": 0.8253210783004761,
+        "log_bias": -0.21899545192718506,
+        "median_fold_error": 1.4665292501449585,
+        "p90_fold_error": 3.0312178134918213,
+        "within_1.25x": 0.3080421254188607,
+        "within_2x": 0.7374042604116803,
+        "r2_log": 0.9406836628913879,
+        "n_records": 669
+      },
+      "severe_marasmic": {
+        "n": 79498,
+        "log_rmse": 0.895940899848938,
+        "log_bias": -0.1383868157863617,
+        "median_fold_error": 1.407663106918335,
+        "p90_fold_error": 2.833779811859131,
+        "within_1.25x": 0.3350776120153966,
+        "within_2x": 0.7757427859820373,
+        "r2_log": 0.9312447309494019,
+        "n_records": 1593
+      },
+      "severe_oedematous": {
+        "n": 23089,
+        "log_rmse": 0.8570120334625244,
+        "log_bias": -0.03748755156993866,
+        "median_fold_error": 1.5508646965026855,
+        "p90_fold_error": 3.5768933296203613,
+        "within_1.25x": 0.24743384295551996,
+        "within_2x": 0.6947897267096886,
+        "r2_log": 0.9211575388908386,
+        "n_records": 462
+      }
+    },
+    "by_drug": {
+      "amoxicillin": {
+        "n": 19351,
+        "log_rmse": 1.113877296447754,
+        "log_bias": 0.19283971190452576,
+        "median_fold_error": 1.6061856746673584,
+        "p90_fold_error": 5.73857307434082,
+        "within_1.25x": 0.221383907808382,
+        "within_2x": 0.6739703374502609,
+        "r2_log": 0.9202308654785156,
+        "n_records": 388
+      },
+      "ceftriaxone": {
+        "n": 20250,
+        "log_rmse": 0.2715184688568115,
+        "log_bias": -0.07351677864789963,
+        "median_fold_error": 1.172271490097046,
+        "p90_fold_error": 1.476495385169983,
+        "within_1.25x": 0.6812345679012346,
+        "within_2x": 0.9663703703703703,
+        "r2_log": 0.926730215549469,
+        "n_records": 405
+      },
+      "gentamicin": {
+        "n": 20450,
+        "log_rmse": 0.4315752387046814,
+        "log_bias": -0.2355014681816101,
+        "median_fold_error": 1.1918156147003174,
+        "p90_fold_error": 1.9297723770141602,
+        "within_1.25x": 0.6059657701711492,
+        "within_2x": 0.908557457212714,
+        "r2_log": 0.9564088582992554,
+        "n_records": 409
+      },
+      "isoniazid": {
+        "n": 19207,
+        "log_rmse": 0.9134734272956848,
+        "log_bias": -0.2860908806324005,
+        "median_fold_error": 1.827555775642395,
+        "p90_fold_error": 3.782116174697876,
+        "within_1.25x": 0.14322903108241786,
+        "within_2x": 0.5936898005935336,
+        "r2_log": 0.9392203092575073,
+        "n_records": 385
+      },
+      "rifampicin": {
+        "n": 19620,
+        "log_rmse": 1.4299613237380981,
+        "log_bias": -0.024792781099677086,
+        "median_fold_error": 2.131828784942627,
+        "p90_fold_error": 6.101737022399902,
+        "within_1.25x": 0.11794087665647299,
+        "within_2x": 0.4463302752293578,
+        "r2_log": 0.7979151606559753,
+        "n_records": 394
+      },
+      "lumefantrine": {
+        "n": 20700,
+        "log_rmse": 0.6030014753341675,
+        "log_bias": -0.17084869742393494,
+        "median_fold_error": 1.3815858364105225,
+        "p90_fold_error": 2.168332099914551,
+        "within_1.25x": 0.33396135265700483,
+        "within_2x": 0.8736231884057971,
+        "r2_log": 0.7775622606277466,
+        "n_records": 414
+      },
+      "albendazole": {
+        "n": 21721,
+        "log_rmse": 1.217480182647705,
+        "log_bias": -0.2452111542224884,
+        "median_fold_error": 2.1417698860168457,
+        "p90_fold_error": 5.164006233215332,
+        "within_1.25x": 0.1229225173794945,
+        "within_2x": 0.4343722664702362,
+        "r2_log": 0.7620747089385986,
+        "n_records": 435
+      },
+      "paracetamol": {
+        "n": 18950,
+        "log_rmse": 0.5084505081176758,
+        "log_bias": -0.4297442138195038,
+        "median_fold_error": 1.5454295873641968,
+        "p90_fold_error": 2.145860195159912,
+        "within_1.25x": 0.18189973614775726,
+        "within_2x": 0.8576253298153035,
+        "r2_log": 0.9337977170944214,
+        "n_records": 379
+      },
+      "fluconazole": {
+        "n": 19550,
+        "log_rmse": 0.2610325217247009,
+        "log_bias": -0.22582443058490753,
+        "median_fold_error": 1.2530333995819092,
+        "p90_fold_error": 1.462185263633728,
+        "within_1.25x": 0.49202046035805624,
+        "within_2x": 0.9964194373401535,
+        "r2_log": 0.9664036631584167,
+        "n_records": 391
+      }
+    },
+    "by_setting": {
+      "industrial_runoff": {
+        "n": 179799,
+        "log_rmse": 0.8549127578735352,
+        "log_bias": -0.1667182743549347,
+        "median_fold_error": 1.4372059106826782,
+        "p90_fold_error": 3.096100091934204,
+        "within_1.25x": 0.32361136602539503,
+        "within_2x": 0.7486248533084167,
+        "r2_log": 0.9333232641220093,
+        "n_records": 3600
+      }
+    },
+    "at_sampled_points": {
+      "n": 45535,
+      "log_rmse": 0.8645495772361755,
+      "log_bias": -0.16444726288318634,
+      "median_fold_error": 1.4506438970565796,
+      "p90_fold_error": 3.110517978668213,
+      "within_1.25x": 0.31700889425716483,
+      "within_2x": 0.7411002525529812,
+      "r2_log": 0.9327870011329651
+    },
+    "parameters": {
+      "CL": {
+        "log_rmse": 0.4057709872722626,
+        "median_fold_error": 1.4153378009796143,
+        "within_1.25x": 0.25805555555555554,
+        "r2_log": 0.9643674492835999
+      },
+      "V1": {
+        "log_rmse": 0.3946208953857422,
+        "median_fold_error": 1.3253411054611206,
+        "within_1.25x": 0.385,
+        "r2_log": 0.8247921466827393
+      },
+      "Q": {
+        "log_rmse": 0.140649676322937,
+        "median_fold_error": 1.0934510231018066,
+        "within_1.25x": 0.8833333333333333,
+        "r2_log": 0.9528578519821167
+      },
+      "V2": {
+        "log_rmse": 0.555816113948822,
+        "median_fold_error": 1.5451669692993164,
+        "within_1.25x": 0.26,
+        "r2_log": 0.8690880537033081
+      },
+      "ka": {
+        "log_rmse": 0.35410138964653015,
+        "median_fold_error": 1.3051095008850098,
+        "within_1.25x": 0.43610911701363964,
+        "r2_log": 0.7540276050567627
+      },
+      "F": {
+        "log_rmse": 0.1984677016735077,
+        "median_fold_error": 1.0817911624908447,
+        "within_1.25x": 0.8444444444444444,
+        "r2_log": 0.9611468315124512
+      },
+      "fu": {
+        "log_rmse": 0.22735103964805603,
+        "median_fold_error": 1.0716814994812012,
+        "within_1.25x": 0.695,
+        "r2_log": 0.9846331477165222
+      }
+    },
+    "calibration": {
+      "epistemic_coverage_of_truth_50": 0.02688807368720976,
+      "total_coverage_of_observations_50": 0.3556461047200334,
+      "epistemic_coverage_of_truth_80": 0.0526271292807175,
+      "total_coverage_of_observations_80": 0.6321586995650705,
+      "epistemic_coverage_of_truth_90": 0.06938606053128779,
+      "total_coverage_of_observations_90": 0.7457546290316115,
+      "epistemic_coverage_of_truth_95": 0.08215339521658097,
+      "total_coverage_of_observations_95": 0.8191486328260251,
+      "mean_epistemic_log_sd": 0.05025908537209034,
+      "mean_total_log_sd": 0.4294925481081009,
+      "calibrated_coverage_50": 0.08304409387420726,
+      "calibrated_coverage_80": 0.1705695248000714,
+      "calibrated_coverage_90": 0.22869823422412855,
+      "calibrated_coverage_95": 0.27605838759158335
+    },
+    "epistemic_scale": 3.0220537185668945,
+    "importance": [
+      {
+        "block": "anthro",
+        "feature": "weight_kg",
+        "delta_log_rmse": 0.10028430819511414,
+        "sd": 1.043081283569336e-06
+      },
+      {
+        "block": "anthro",
+        "feature": "oedema_grade",
+        "delta_log_rmse": 7.987022399902344e-06,
+        "sd": 3.5762786865234375e-07
+      },
+      {
+        "block": "labs",
+        "feature": "albumin_g_l",
+        "delta_log_rmse": 4.0531158447265625e-06,
+        "sd": 1.1920928955078125e-07
+      },
+      {
+        "block": "anthro",
+        "feature": "weight_for_height_pct",
+        "delta_log_rmse": 2.7120113372802734e-06,
+        "sd": 2.9802322387695312e-08
+      },
+      {
+        "block": "anthro",
+        "feature": "male",
+        "delta_log_rmse": 2.652406692504883e-06,
+        "sd": 3.2782554626464844e-07
+      },
+      {
+        "block": "anthro",
+        "feature": "whz",
+        "delta_log_rmse": 2.652406692504883e-06,
+        "sd": 2.9802322387695312e-08
+      },
+      {
+        "block": "anthro",
+        "feature": "bmi",
+        "delta_log_rmse": 1.9371509552001953e-06,
+        "sd": 2.9802322387695312e-08
+      },
+      {
+        "block": "anthro",
+        "feature": "log_weight",
+        "delta_log_rmse": 1.7285346984863281e-06,
+        "sd": 2.384185791015625e-07
+      },
+      {
+        "block": "anthro",
+        "feature": "waz",
+        "delta_log_rmse": 8.046627044677734e-07,
+        "sd": 2.9802322387695312e-08
+      },
+      {
+        "block": "anthro",
+        "feature": "haz",
+        "delta_log_rmse": 6.258487701416016e-07,
+        "sd": 2.9802322387695312e-08
+      },
+      {
+        "block": "anthro",
+        "feature": "height_cm",
+        "delta_log_rmse": 4.470348358154297e-07,
+        "sd": 2.9802322387695312e-08
+      },
+      {
+        "block": "labs",
+        "feature": "agp_g_l",
+        "delta_log_rmse": 3.8743019104003906e-07,
+        "sd": 2.9802322387695312e-08
+      },
+      {
+        "block": "labs",
+        "feature": "haemoglobin_g_dl",
+        "delta_log_rmse": 3.2782554626464844e-07,
+        "sd": 2.9802322387695312e-08
+      },
+      {
+        "block": "tox",
+        "feature": "water_lead",
+        "delta_log_rmse": 3.2782554626464844e-07,
+        "sd": 2.9802322387695312e-08
+      },
+      {
+        "block": "labs",
+        "feature": "haematocrit",
+        "delta_log_rmse": 2.980232238769531e-07,
+        "sd": 5.960464477539063e-08
+      },
+      {
+        "block": "labs",
+        "feature": "crp_mg_l",
+        "delta_log_rmse": 2.384185791015625e-07,
+        "sd": 1.1920928955078125e-07
+      },
+      {
+        "block": "tox",
+        "feature": "water_arsenic",
+        "delta_log_rmse": 2.384185791015625e-07,
+        "sd": 0.0
+      },
+      {
+        "block": "tox",
+        "feature": "blood_lead",
+        "delta_log_rmse": 1.7881393432617188e-07,
+        "sd": 0.0
+      },
+      {
+        "block": "tox",
+        "feature": "urinary_arsenic",
+        "delta_log_rmse": 1.7881393432617188e-07,
+        "sd": 0.0
+      },
+      {
+        "block": "tox",
+        "feature": "water_cadmium",
+        "delta_log_rmse": 1.1920928955078125e-07,
+        "sd": 0.0
+      },
+      {
+        "block": "anthro",
+        "feature": "age_months",
+        "delta_log_rmse": 8.940696716308594e-08,
+        "sd": 8.940696716308594e-08
+      },
+      {
+        "block": "tox",
+        "feature": "water_fluoride",
+        "delta_log_rmse": 8.940696716308594e-08,
+        "sd": 2.9802322387695312e-08
+      },
+      {
+        "block": "tox",
+        "feature": "water_manganese",
+        "delta_log_rmse": 8.940696716308594e-08,
+        "sd": 2.9802322387695312e-08
+      },
+      {
+        "block": "tox",
+        "feature": "water_nitrate",
+        "delta_log_rmse": 5.960464477539063e-08,
+        "sd": 0.0
+      },
+      {
+        "block": "tox",
+        "feature": "setting_clean_municipal",
+        "delta_log_rmse": 0.0,
+        "sd": 0.0
+      },
+      {
+        "block": "tox",
+        "feature": "setting_mixed_periurban",
+        "delta_log_rmse": 0.0,
+        "sd": 0.0
+      },
+      {
+        "block": "tox",
+        "feature": "setting_shallow_tubewell",
+        "delta_log_rmse": 0.0,
+        "sd": 0.0
+      },
+      {
+        "block": "tox",
+        "feature": "setting_fluoride_belt",
+        "delta_log_rmse": 0.0,
+        "sd": 0.0
+      },
+      {
+        "block": "tox",
+        "feature": "setting_industrial_runoff",
+        "delta_log_rmse": 0.0,
+        "sd": 0.0
+      },
+      {
+        "block": "tox",
+        "feature": "setting_agricultural",
+        "delta_log_rmse": 0.0,
+        "sd": 0.0
+      },
+      {
+        "block": "anthro",
+        "feature": "muac_mm",
+        "delta_log_rmse": -3.2782554626464844e-07,
+        "sd": 8.940696716308594e-08
+      }
+    ],
+    "seconds": 191.55052185058594
+  },
+  "drug_hybrid": {
+    "run": "drug_hybrid",
+    "test": "drug_test.npz",
+    "model_type": "hybrid",
+    "ablate_blocks": [],
+    "n_records": 7974,
+    "n_params": 678707,
+    "overall": {
+      "n": 397191,
+      "log_rmse": 3.2186899185180664,
+      "log_bias": -0.08486279100179672,
+      "median_fold_error": 11.183616638183594,
+      "p90_fold_error": 97.00975036621094,
+      "within_1.25x": 0.060650921093378246,
+      "within_2x": 0.17789678013852278,
+      "r2_log": -0.14533662796020508
+    },
+    "by_nutrition": {
+      "adequate": {
+        "n": 83743,
+        "log_rmse": 2.666971445083618,
+        "log_bias": -0.2300921380519867,
+        "median_fold_error": 7.202927112579346,
+        "p90_fold_error": 55.333309173583984,
+        "within_1.25x": 0.06505618380043705,
+        "within_2x": 0.206727726496543,
+        "r2_log": -0.1331087350845337,
+        "n_records": 1675
+      },
+      "mild": {
+        "n": 12981,
+        "log_rmse": 3.0664725303649902,
+        "log_bias": -0.0028696209192276,
+        "median_fold_error": 9.884420394897461,
+        "p90_fold_error": 80.87734985351562,
+        "within_1.25x": 0.07041060010784994,
+        "within_2x": 0.1902010630922117,
+        "r2_log": -0.0965719223022461,
+        "n_records": 260
+      },
+      "moderate": {
+        "n": 71739,
+        "log_rmse": 3.0957601070404053,
+        "log_bias": -0.18773217499256134,
+        "median_fold_error": 10.937251091003418,
+        "p90_fold_error": 83.4283218383789,
+        "within_1.25x": 0.0632292058712834,
+        "within_2x": 0.17926093198957332,
+        "r2_log": -0.14731550216674805,
+        "n_records": 1437
+      },
+      "severe_marasmic": {
+        "n": 180416,
+        "log_rmse": 3.5715456008911133,
+        "log_bias": 0.10920441150665283,
+        "median_fold_error": 14.26734447479248,
+        "p90_fold_error": 157.09255981445312,
+        "within_1.25x": 0.06140807910606598,
+        "within_2x": 0.17356553742461867,
+        "r2_log": -0.14162230491638184,
+        "n_records": 3635
+      },
+      "severe_oedematous": {
+        "n": 48312,
+        "log_rmse": 2.9070332050323486,
+        "log_bias": -0.42712756991386414,
+        "median_fold_error": 10.844863891601562,
+        "p90_fold_error": 70.753662109375,
+        "within_1.25x": 0.04373654578572611,
+        "within_2x": 0.13876469614174533,
+        "r2_log": -0.2855710983276367,
+        "n_records": 967
+      }
+    },
+    "by_drug": {
+      "gentamicin": {
+        "n": 201400,
+        "log_rmse": 3.027789354324341,
+        "log_bias": -2.3735644817352295,
+        "median_fold_error": 19.42238998413086,
+        "p90_fold_error": 68.77832794189453,
+        "within_1.25x": 0.028570009930486594,
+        "within_2x": 0.08651439920556107,
+        "r2_log": 0.03322327136993408,
+        "n_records": 4028
+      },
+      "rifampicin": {
+        "n": 195791,
+        "log_rmse": 3.40390682220459,
+        "log_bias": 2.2694053649902344,
+        "median_fold_error": 4.76865816116333,
+        "p90_fold_error": 298.3308410644531,
+        "within_1.25x": 0.09365088282913923,
+        "within_2x": 0.2718970739206603,
+        "r2_log": 0.450560986995697,
+        "n_records": 3946
+      }
+    },
+    "by_setting": {
+      "clean_municipal": {
+        "n": 88820,
+        "log_rmse": 3.283250093460083,
+        "log_bias": 0.05318514630198479,
+        "median_fold_error": 11.565340042114258,
+        "p90_fold_error": 107.96524810791016,
+        "within_1.25x": 0.060875928844854765,
+        "within_2x": 0.1709187120018014,
+        "r2_log": -0.12262070178985596,
+        "n_records": 1785
+      },
+      "mixed_periurban": {
+        "n": 110830,
+        "log_rmse": 3.274153470993042,
+        "log_bias": -0.0471409447491169,
+        "median_fold_error": 11.652547836303711,
+        "p90_fold_error": 104.90662384033203,
+        "within_1.25x": 0.060182261120635204,
+        "within_2x": 0.17508797257060363,
+        "r2_log": -0.13911449909210205,
+        "n_records": 2226
+      },
+      "shallow_tubewell": {
+        "n": 70651,
+        "log_rmse": 3.0194973945617676,
+        "log_bias": -0.21238639950752258,
+        "median_fold_error": 9.620354652404785,
+        "p90_fold_error": 79.6644058227539,
+        "within_1.25x": 0.0648681547324171,
+        "within_2x": 0.1958783315168929,
+        "r2_log": -0.17637407779693604,
+        "n_records": 1415
+      },
+      "fluoride_belt": {
+        "n": 39294,
+        "log_rmse": 3.3055832386016846,
+        "log_bias": -0.07076531648635864,
+        "median_fold_error": 12.158348083496094,
+        "p90_fold_error": 103.25151824951172,
+        "within_1.25x": 0.05787143075278668,
+        "within_2x": 0.16928793199979641,
+        "r2_log": -0.13543832302093506,
+        "n_records": 790
+      },
+      "industrial_runoff": {
+        "n": 40070,
+        "log_rmse": 3.1192691326141357,
+        "log_bias": -0.32113581895828247,
+        "median_fold_error": 10.910097122192383,
+        "p90_fold_error": 84.88307189941406,
+        "within_1.25x": 0.05784876466184178,
+        "within_2x": 0.1780384327427003,
+        "r2_log": -0.23618745803833008,
+        "n_records": 803
+      },
+      "agricultural": {
+        "n": 47526,
+        "log_rmse": 3.2627384662628174,
+        "log_bias": -0.053699832409620285,
+        "median_fold_error": 11.1943941116333,
+        "p90_fold_error": 99.87255859375,
+        "within_1.25x": 0.05971468248958465,
+        "within_2x": 0.17775533392248455,
+        "r2_log": -0.11931085586547852,
+        "n_records": 955
+      }
+    },
+    "at_sampled_points": {
+      "n": 100698,
+      "log_rmse": 3.1867141723632812,
+      "log_bias": -0.1897108405828476,
+      "median_fold_error": 11.408037185668945,
+      "p90_fold_error": 89.70608520507812,
+      "within_1.25x": 0.05876978688752507,
+      "within_2x": 0.17639873681701723,
+      "r2_log": -0.15692055225372314
+    },
+    "parameters": {
+      "CL": {
+        "log_rmse": 6.374083995819092,
+        "median_fold_error": 2719.901611328125,
+        "within_1.25x": 0.0,
+        "r2_log": -24.878042221069336
+      },
+      "V1": {
+        "log_rmse": 4.737518787384033,
+        "median_fold_error": 358.2112121582031,
+        "within_1.25x": 0.0,
+        "r2_log": -19.253768920898438
+      },
+      "Q": {
+        "log_rmse": 8.185454368591309,
+        "median_fold_error": 40957.6875,
+        "within_1.25x": 0.37534487083019813,
+        "r2_log": -153.108642578125
+      },
+      "V2": {
+        "log_rmse": 4.0959248542785645,
+        "median_fold_error": 151.29908752441406,
+        "within_1.25x": 0.3852520692249812,
+        "r2_log": -17.188798904418945
+      },
+      "ka": {
+        "log_rmse": 0.318183571100235,
+        "median_fold_error": 1.3575692176818848,
+        "within_1.25x": 0.15331981753674606,
+        "r2_log": 0.9169837236404419
+      },
+      "F": {
+        "log_rmse": 0.14049583673477173,
+        "median_fold_error": 1.0,
+        "within_1.25x": 0.8328317030348633,
+        "r2_log": 0.9194274544715881
+      },
+      "fu": {
+        "log_rmse": 0.6438573598861694,
+        "median_fold_error": 1.1111111640930176,
+        "within_1.25x": 0.5051417105593178,
+        "r2_log": 0.41313713788986206
+      }
+    },
+    "calibration": {
+      "epistemic_coverage_of_truth_50": 0.007307668838965214,
+      "total_coverage_of_observations_50": 0.04310476268981676,
+      "epistemic_coverage_of_truth_80": 0.013728246046667853,
+      "total_coverage_of_observations_80": 0.08078276957034775,
+      "epistemic_coverage_of_truth_90": 0.017605638906239306,
+      "total_coverage_of_observations_90": 0.10294430680669575,
+      "epistemic_coverage_of_truth_95": 0.020897330218908553,
+      "total_coverage_of_observations_95": 0.1227691134777257,
+      "mean_epistemic_log_sd": 0.03263234382029623,
+      "mean_total_log_sd": 0.23305963072925806,
+      "calibrated_coverage_50": 0.022836506137405812,
+      "calibrated_coverage_80": 0.042805061579314005,
+      "calibrated_coverage_90": 0.053963574235586134,
+      "calibrated_coverage_95": 0.06336046325088514
+    },
+    "epistemic_scale": 3.2035224437713623,
+    "importance": [
+      {
+        "block": "anthro",
+        "feature": "oedema_grade",
+        "delta_log_rmse": 0.008516073226928711,
+        "sd": 5.245208740234375e-05
+      },
+      {
+        "block": "anthro",
+        "feature": "weight_kg",
+        "delta_log_rmse": 0.006121039390563965,
+        "sd": 0.00042188167572021484
+      },
+      {
+        "block": "anthro",
+        "feature": "whz",
+        "delta_log_rmse": 0.005338788032531738,
+        "sd": 0.000662684440612793
+      },
+      {
+        "block": "tox",
+        "feature": "setting_clean_municipal",
+        "delta_log_rmse": 0.0053327083587646484,
+        "sd": 5.054473876953125e-05
+      },
+      {
+        "block": "anthro",
+        "feature": "weight_for_height_pct",
+        "delta_log_rmse": 0.0043326616287231445,
+        "sd": 0.0001817941665649414
+      },
+      {
+        "block": "anthro",
+        "feature": "bmi",
+        "delta_log_rmse": 0.003387928009033203,
+        "sd": 0.00020551681518554688
+      },
+      {
+        "block": "tox",
+        "feature": "setting_shallow_tubewell",
+        "delta_log_rmse": 0.003052949905395508,
+        "sd": 0.00010013580322265625
+      },
+      {
+        "block": "tox",
+        "feature": "setting_industrial_runoff",
+        "delta_log_rmse": 0.0024546384811401367,
+        "sd": 5.519390106201172e-05
+      },
+      {
+        "block": "anthro",
+        "feature": "male",
+        "delta_log_rmse": 0.002279996871948242,
+        "sd": 0.00010418891906738281
+      },
+      {
+        "block": "anthro",
+        "feature": "log_weight",
+        "delta_log_rmse": 0.001610875129699707,
+        "sd": 0.00014507770538330078
+      },
+      {
+        "block": "tox",
+        "feature": "water_manganese",
+        "delta_log_rmse": 0.0012366771697998047,
+        "sd": 9.846687316894531e-05
+      },
+      {
+        "block": "labs",
+        "feature": "haematocrit",
+        "delta_log_rmse": 0.0011763572692871094,
+        "sd": 0.00016617774963378906
+      },
+      {
+        "block": "tox",
+        "feature": "water_cadmium",
+        "delta_log_rmse": 0.0005488395690917969,
+        "sd": 0.00021505355834960938
+      },
+      {
+        "block": "tox",
+        "feature": "water_lead",
+        "delta_log_rmse": 0.0005438327789306641,
+        "sd": 0.0007939338684082031
+      },
+      {
+        "block": "tox",
+        "feature": "water_fluoride",
+        "delta_log_rmse": 0.00020039081573486328,
+        "sd": 6.99758529663086e-05
+      },
+      {
+        "block": "tox",
+        "feature": "setting_mixed_periurban",
+        "delta_log_rmse": 0.00013828277587890625,
+        "sd": 7.772445678710938e-05
+      },
+      {
+        "block": "tox",
+        "feature": "setting_agricultural",
+        "delta_log_rmse": 7.534027099609375e-05,
+        "sd": 6.67572021484375e-05
+      },
+      {
+        "block": "anthro",
+        "feature": "muac_mm",
+        "delta_log_rmse": 8.821487426757812e-06,
+        "sd": 7.05718994140625e-05
+      },
+      {
+        "block": "tox",
+        "feature": "setting_fluoride_belt",
+        "delta_log_rmse": -8.344650268554688e-06,
+        "sd": 3.0994415283203125e-06
+      },
+      {
+        "block": "tox",
+        "feature": "water_nitrate",
+        "delta_log_rmse": -6.449222564697266e-05,
+        "sd": 3.8504600524902344e-05
+      },
+      {
+        "block": "anthro",
+        "feature": "waz",
+        "delta_log_rmse": -0.00023853778839111328,
+        "sd": 4.303455352783203e-05
+      },
+      {
+        "block": "labs",
+        "feature": "haemoglobin_g_dl",
+        "delta_log_rmse": -0.0004962682723999023,
+        "sd": 0.00020492076873779297
+      },
+      {
+        "block": "anthro",
+        "feature": "height_cm",
+        "delta_log_rmse": -0.0007401704788208008,
+        "sd": 1.9669532775878906e-05
+      },
+      {
+        "block": "tox",
+        "feature": "water_arsenic",
+        "delta_log_rmse": -0.0012969970703125,
+        "sd": 0.0013818740844726562
+      },
+      {
+        "block": "anthro",
+        "feature": "age_months",
+        "delta_log_rmse": -0.0017235279083251953,
+        "sd": 0.0001800060272216797
+      },
+      {
+        "block": "tox",
+        "feature": "urinary_arsenic",
+        "delta_log_rmse": -0.003308892250061035,
+        "sd": 5.257129669189453e-05
+      },
+      {
+        "block": "anthro",
+        "feature": "haz",
+        "delta_log_rmse": -0.003861069679260254,
+        "sd": 0.0001863241195678711
+      },
+      {
+        "block": "tox",
+        "feature": "blood_lead",
+        "delta_log_rmse": -0.005579829216003418,
+        "sd": 0.0003470182418823242
+      },
+      {
+        "block": "labs",
+        "feature": "agp_g_l",
+        "delta_log_rmse": -0.008453130722045898,
+        "sd": 0.0007252693176269531
+      },
+      {
+        "block": "labs",
+        "feature": "crp_mg_l",
+        "delta_log_rmse": -0.01009511947631836,
+        "sd": 0.0007100105285644531
+      },
+      {
+        "block": "labs",
+        "feature": "albumin_g_l",
+        "delta_log_rmse": -0.011256575584411621,
+        "sd": 0.0010210275650024414
+      }
+    ],
+    "seconds": 365.78236985206604
+  }
+}

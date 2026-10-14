@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+message: "If you use this software or its results, please cite the preprint."
+title: "MalnuPK: mechanism-constrained deep learning for pharmacokinetics under undernutrition and water-toxicant co-exposure"
+abstract: >-
+  A generative simulator in which nutritional status and drinking-water toxicant
+  exposure jointly determine the pharmacokinetics of nine essential medicines,
+  and a mechanism-constrained neural model that recovers individual
+  pharmacokinetic parameters from bedside-observable covariates.
+type: software
+authors:
+  - family-names: Manne
+    given-names: Pranav
+    orcid: "https://orcid.org/0009-0004-7575-7208"
+    email: pranavmanne17@gmail.com
+    affiliation: "Independent researcher"
+license: MIT
+repository-code: "https://github.com/REPLACE-ME/malnupk"
+keywords:
+  - pharmacokinetics
+  - severe acute malnutrition
+  - physiologically based modelling
+  - scientific machine learning
+  - dose individualisation
+  - environmental toxicants
+preferred-citation:
+  type: article
+  title: "Mechanism-constrained deep learning recovers individual pharmacokinetics under undernutrition and water-toxicant co-exposure: an in silico study"
+  authors:
+    - family-names: Manne
+      given-names: Pranav
+      orcid: "https://orcid.org/0009-0004-7575-7208"
+  year: 2026
+  notes: "Preprint. DOI to be added once posted."
