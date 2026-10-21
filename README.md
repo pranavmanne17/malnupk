@@ -6,7 +6,6 @@ undernourished, environmentally-exposed children.**
 [![tests](https://github.com/REPLACE-ME/malnupk/actions/workflows/tests.yml/badge.svg)](https://github.com/REPLACE-ME/malnupk/actions/workflows/tests.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-Preprint: [`paper/MalnuPK_manuscript.pdf`](paper/MalnuPK_manuscript.pdf) · DOI to be added once posted.
 Pranav Manne ([ORCID 0009-0004-7575-7208](https://orcid.org/0009-0004-7575-7208))
 
 
