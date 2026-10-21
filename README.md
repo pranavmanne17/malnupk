@@ -3,14 +3,14 @@
 **A pharmacology-informed deep learning model of drug disposition in
 undernourished, environmentally-exposed children.**
 
-[![tests](https://github.com/REPLACE-ME/malnupk/actions/workflows/tests.yml/badge.svg)](https://github.com/REPLACE-ME/malnupk/actions/workflows/tests.yml)
+[![tests](https://github.com/pranavmanne17/malnupk/actions/workflows/tests.yml/badge.svg)](https://github.com/pranavmanne17/malnupk/actions/workflows/tests.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 Pranav Manne ([ORCID 0009-0004-7575-7208](https://orcid.org/0009-0004-7575-7208))
 
 
 ```bash
-git clone https://github.com/REPLACE-ME/malnupk && cd malnupk
+git clone https://github.com/pranavmanne17/malnupk && cd malnupk
 pip install -r requirements.txt
 pytest -q tests/                 # 47 tests, ~5 s
 bash scripts/run_all.sh          # full pipeline, ~2.5 h on two CPU cores
@@ -30,9 +30,10 @@ scripts/     dataset generation, training, evaluation, figures, diagnostics
 tests/       47 tests, weighted toward physical correctness
 outputs/     every number in the paper, plus the six figures  (see outputs/README.md)
 runs/        training histories for all nine runs (weights: see runs/README.md)
-paper/       manuscript, Supporting Information, sources, submission notes
+paper/       Supporting Information, figures, graphical abstract
 REFERENCES.md   30 verified sources, and the claims that still lack one
 RESULTS.md      generated from outputs/ by scripts/summarise.py
+CHANGELOG.md    how the results changed as the simulator was corrected
 ```
 
 
@@ -272,16 +273,13 @@ sparse noisy samples and partially-missing labs: median fold error **1.050**,
 **98.6%** within two-fold, R² (log) **0.997**. The latent PK parameters — never
 given as inputs — are recovered with R² 0.981–0.999.
 
-**Supervision matters more than architecture, and this reverses an earlier
-claim.** Under *identical* inputs, *identical* supervision and within 3% the
+**Supervision matters more than architecture.** Under *identical* inputs, *identical* supervision and within 3% the
 same parameter count, swapping the mechanistic solver for a direct
 curve-regression head costs **1.54×** in log-RMSE (0.705 → 1.087). Adding the
 auxiliary supervision on parameters and latent physiology to the hybrid is
 worth considerably more: **3.7×** (0.705 → 0.190).
 
-Earlier versions of this README reported the solver as worth 2.5× and treated
-architecture as the dominant effect. Against the corrected simulator that is
-wrong. The reason is diagnosable rather than mysterious: softening the
+The reason is diagnosable rather than mysterious: softening the
 absorption model during external calibration made bioavailability and
 clearance harder to separate from concentration data alone, so the
 seven-parameter bottleneck became partly unidentifiable without parameter
@@ -301,8 +299,8 @@ discarding the laboratory panel as well costs almost nothing further
 **Permutation importance partly recovers the mechanism it was never shown**,
 in order: body weight → oedema grade → sex → water arsenic → serum albumin →
 water lead. Body size, oedema and the two strongest exposure–response relations
-appear where the simulator's construction puts them. Water cadmium, which
-previously ranked fourth, now falls outside the top six.
+appear where the simulator's construction puts them. Water cadmium falls
+outside the top six.
 
 Sex ranking third is **the model over-attributing, and we chased it down**.
 Flipping sex in the simulator changes fat-free mass by 3.3% and moves only V1
@@ -317,10 +315,9 @@ can split a learned effect among redundant inputs however it likes. Auxiliary
 supervision on latent physiology did not prevent this, which bounds the
 interpretability claim above. Reproduce with `python scripts/diagnose_sex.py`.
 
-So "exactly the causal ordering the simulator encodes", claimed by an earlier
-version of this file, was an overstatement: the check recovers the ordering for
-the mechanistic covariates and exposes an over-attribution for one that the
-simulator barely uses.
+So the importance check recovers the causal ordering for the mechanistic
+covariates, and exposes an over-attribution for one that the simulator barely
+uses.
 
 **Model-guided vs weight-band dosing**, on a fresh population of 120 virtual
 children, with the simulator scoring both:
@@ -350,11 +347,7 @@ target is ≤0.5 mg/L (≤1.0 for neonates): Hollander et al., *Antibiotics*
 |---|---|---|
 | 2.0 mg/L (unsourced) | 0.0% | 0.0% |
 | 1.0 mg/L (neonatal) | 2.5% | 0.0% |
-| **0.5 mg/L (paediatric, now implemented)** | **12.5%** | **0.0%** |
-
-An intermediate version of this README reported over-exposure as an artefact of
-the uncalibrated simulator. That was premature: it had been suppressed by a
-threshold four times too lenient, and it returns once the threshold is sourced.
+| **0.5 mg/L (paediatric, used here)** | **12.5%** | **0.0%** |
 
 *Amoxicillin and rifampicin targets are not met in a well-nourished child.*
 Amoxicillin targets 50% fT>MIC but a well-nourished reference child reaches
@@ -495,7 +488,7 @@ for which of these claims currently have a verified source and which do not.
   author  = {Manne, Pranav},
   year    = {2026},
   note    = {Preprint},
-  url     = {https://github.com/REPLACE-ME/malnupk}
+  url     = {https://github.com/pranavmanne17/malnupk}
 }
 ```
 

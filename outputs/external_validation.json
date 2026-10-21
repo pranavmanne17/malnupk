@@ -1,0 +1,231 @@
+{
+  "sources": [
+    {
+      "key": "seaton2007",
+      "citation": "Seaton C, Ignas J, Muchohi S, Kokwaro G, Maitland K, Thomson AH. Population pharmacokinetics of a single daily intramuscular dose of gentamicin in children with severe malnutrition. J Antimicrob Chemother. 2007;59(4):681-689.",
+      "doi": "10.1093/jac/dkl561",
+      "url": "https://academic.oup.com/jac/article/59/4/681/677525",
+      "verification": "primary"
+    },
+    {
+      "key": "denoeudndam2016",
+      "citation": "Denoeud-Ndam L, Dicko A, Baudin E, et al. Efficacy of artemether-lumefantrine in relation to drug exposure in children with and without severe acute malnutrition: an open comparative intervention study in Mali and Niger. BMC Medicine. 2016;14:167.",
+      "doi": "10.1186/s12916-016-0716-1",
+      "url": "https://link.springer.com/article/10.1186/s12916-016-0716-1",
+      "verification": "primary"
+    },
+    {
+      "key": "tebrake2015",
+      "citation": "te Brake LHM, Ruslami R, Later-Nijland H, et al. Exposure to total and protein-unbound rifampin is not affected by malnutrition in Indonesian tuberculosis patients. Antimicrob Agents Chemother. 2015;59(6).",
+      "doi": "10.1128/aac.03485-14",
+      "url": "https://journals.asm.org/doi/10.1128/aac.03485-14",
+      "verification": "primary"
+    },
+    {
+      "key": "ngcobo2025",
+      "citation": "Ngcobo NN. Malnutrition and its effect on drug pharmacokinetics: a clinical perspective. Clin Pharmacokinet. 2025;64(9):1283-1293.",
+      "doi": "10.1007/s40262-025-01558-5",
+      "url": "https://link.springer.com/article/10.1007/s40262-025-01558-5",
+      "verification": "primary"
+    }
+  ],
+  "comparisons": [
+    {
+      "kind": "parameter",
+      "source": "seaton2007",
+      "drug": "gentamicin",
+      "quantity": "CL_per_kg",
+      "units": "L/h/kg",
+      "published": 0.103,
+      "predicted": 0.08810339736072381,
+      "fold_difference": 1.169080910447581,
+      "inside_published_interval": true,
+      "published_interval": [
+        0.02,
+        0.16
+      ],
+      "predicted_interval": [
+        0.06108404868123657,
+        0.10268638727784885
+      ],
+      "verdict": "agrees",
+      "note": "Children with severe malnutrition, Kenya; 62% marasmus, 38% kwashiorkor; 7.5 mg/kg IM once daily. Typical population value; individual median 0.10."
+    },
+    {
+      "kind": "parameter",
+      "source": "seaton2007",
+      "drug": "gentamicin",
+      "quantity": "Vss_per_kg",
+      "units": "L/kg",
+      "published": 0.67,
+      "predicted": 0.5088766600951941,
+      "fold_difference": 1.3166255254753974,
+      "inside_published_interval": true,
+      "published_interval": [
+        0.26,
+        1.31
+      ],
+      "predicted_interval": [
+        0.4692120488570494,
+        0.5273194568100553
+      ],
+      "verdict": "agrees",
+      "note": "Median Vss/F; mean (SD) 0.67 (0.22). Reference paediatric gentamicin Vd is roughly 0.3-0.5 L/kg, so this cohort sits well above it."
+    },
+    {
+      "kind": "parameter",
+      "source": "seaton2007",
+      "drug": "gentamicin",
+      "quantity": "V1_per_kg",
+      "units": "L/kg",
+      "published": 0.254,
+      "predicted": 0.16276943132668914,
+      "fold_difference": 1.5604895706135693,
+      "inside_published_interval": null,
+      "published_interval": null,
+      "predicted_interval": [
+        0.15022399928611657,
+        0.1937019421928915
+      ],
+      "verdict": "marginal",
+      "note": "Central compartment, typical value (RSE 8.8%)."
+    },
+    {
+      "kind": "parameter",
+      "source": "seaton2007",
+      "drug": "gentamicin",
+      "quantity": "V2_per_kg",
+      "units": "L/kg",
+      "published": 0.406,
+      "predicted": 0.3458353087017795,
+      "fold_difference": 1.173969198009512,
+      "inside_published_interval": null,
+      "published_interval": null,
+      "predicted_interval": [
+        0.3049652627896081,
+        0.35925630440549644
+      ],
+      "verdict": "agrees",
+      "note": "Peripheral compartment, typical value (RSE 14%)."
+    },
+    {
+      "kind": "absolute",
+      "source": "denoeudndam2016",
+      "drug": "lumefantrine",
+      "quantity": "day_7_concentration_SAM",
+      "units": "ng/mL",
+      "published": 246.0,
+      "predicted": 172.67985117200863,
+      "fold_difference": 1.4246016447799472,
+      "published_interval": [
+        160,
+        438
+      ],
+      "predicted_interval": [
+        66.90595771470869,
+        406.8924205433294
+      ],
+      "inside_published_interval": true,
+      "verdict": "",
+      "note": ""
+    },
+    {
+      "kind": "absolute",
+      "source": "denoeudndam2016",
+      "drug": "lumefantrine",
+      "quantity": "day_7_concentration_non-SAM",
+      "units": "ng/mL",
+      "published": 330.0,
+      "predicted": 290.2969517073849,
+      "fold_difference": 1.1367670175628823,
+      "published_interval": [
+        216,
+        503
+      ],
+      "predicted_interval": [
+        186.46118689685875,
+        436.2442625635476
+      ],
+      "inside_published_interval": true,
+      "verdict": "",
+      "note": ""
+    },
+    {
+      "kind": "ratio",
+      "source": "denoeudndam2016",
+      "drug": "lumefantrine",
+      "quantity": "day_7 SAM / non-SAM",
+      "units": "-",
+      "published": 0.7454545454545455,
+      "predicted": 0.594838664878808,
+      "fold_difference": 1.2532045905361984,
+      "published_interval": null,
+      "predicted_interval": null,
+      "inside_published_interval": null,
+      "verdict": "fitted",
+      "note": "GI coefficients were fitted to this target"
+    },
+    {
+      "kind": "ratio",
+      "source": "tebrake2015",
+      "drug": "rifampicin",
+      "quantity": "AUC severe / adequate",
+      "units": "-",
+      "published": 1.004,
+      "predicted": 0.4820300634858024,
+      "fold_difference": 2.0828576390849354,
+      "published_interval": null,
+      "predicted_interval": null,
+      "inside_published_interval": null,
+      "verdict": "disagrees",
+      "note": "Published comparator is adults; paediatric evidence is second-hand via a review."
+    },
+    {
+      "kind": "direction",
+      "source": "ngcobo2025",
+      "drug": "-",
+      "quantity": "aminoglycoside Vss/kg rises in malnutrition",
+      "units": "-",
+      "published": null,
+      "predicted": 1.192063367601388,
+      "fold_difference": null,
+      "published_interval": null,
+      "predicted_interval": null,
+      "inside_published_interval": null,
+      "verdict": "consistent",
+      "note": "increase"
+    },
+    {
+      "kind": "direction",
+      "source": "ngcobo2025",
+      "drug": "-",
+      "quantity": "beta-lactam CL/kg falls in malnutrition",
+      "units": "-",
+      "published": null,
+      "predicted": 1.0441220435895346,
+      "fold_difference": null,
+      "published_interval": null,
+      "predicted_interval": null,
+      "inside_published_interval": null,
+      "verdict": "inconsistent",
+      "note": "decrease"
+    }
+  ],
+  "cohorts": {
+    "seaton2007_sam": {
+      "n": 400,
+      "weight_median_kg": 8.802138698535234,
+      "weight_p5_kg": 3.829329494961855,
+      "weight_p95_kg": 15.422734399215216,
+      "age_median_months": 30.64971581228293,
+      "published_weight_median_kg": 7.85,
+      "weight_median_ratio": 1.121291553953533,
+      "weight_matched": true
+    }
+  },
+  "rifampicin_decomposition": {
+    "F_ratio": 0.6303470396403923,
+    "CL_per_kg_ratio": 1.3370451188643464,
+    "fu_ratio": 1.2897019060506634
+  }
+}

@@ -1,31 +1,28 @@
 # Paper
 
+Supporting material for *Mechanism-constrained deep learning recovers
+individual pharmacokinetics under undernutrition and water-toxicant
+co-exposure: an in silico study* (Manne, 2026). The manuscript itself is not
+included in this repository.
+
 | File | What it is |
 |---|---|
-| `MalnuPK_manuscript.pdf` | The preprint, 29 pp, figures embedded |
 | `MalnuPK_supporting_information.pdf` | Supporting Information, 6 pp, S1–S9 and Figures S1–S2 |
-| `manuscript.md`, `supporting_information.md` | Editable sources |
-| `graphical_abstract.png`, `toc.svg` | Graphical abstract and its source |
-| `SUBMISSION.md` | Preprint submission notes: abstract, keywords, category, licence, checklist |
-| `build_pdf.py` | Renders either markdown file to a typeset PDF |
+| `supporting_information.md` | Editable source of the Supporting Information |
+| `01_population.png` … `06_importance.png`, `02_architecture.png` | Figures |
+| `graphical_abstract.png`, `graphical_abstract_1600.png`, `toc.svg` | Graphical abstract and its source |
+| `build_pdf.py` | Renders a markdown file to a typeset PDF |
 
-## Rebuilding the PDFs
+## Rebuilding the Supporting Information PDF
 
 Requires `pandoc` and `playwright` (`pip install playwright && playwright install chromium`).
 
 ```bash
-python3 - <<'PY'
-import subprocess, pathlib
-for src, out in (("manuscript.md","m.html"), ("supporting_information.md","s.html")):
-    body = subprocess.run(["pandoc", src, "-t", "html"], capture_output=True, text=True).stdout
-    pathlib.Path(out).write_text("<!doctype html><html><head><meta charset='utf-8'>"
-                                 "</head><body>\n" + body + "\n</body></html>")
-PY
-python3 build_pdf.py $PWD/m.html $PWD/MalnuPK_manuscript.pdf
+pandoc supporting_information.md -t html -s -o s.html
 python3 build_pdf.py $PWD/s.html $PWD/MalnuPK_supporting_information.pdf
-rm -f m.html s.html
+rm -f s.html
 ```
 
-The figures in the manuscript are the ones in `../outputs/figures/`, copied here
-so the paper builds standalone. Regenerate them with
+The figures are the ones in `../outputs/figures/`, copied here so the
+Supporting Information builds standalone. Regenerate them with
 `python scripts/make_plots.py --run runs/main_hybrid` from the repository root.
