@@ -15,6 +15,8 @@ was claimed before and why it was revised.
 - Removed the manuscript sources from `paper/`; the Supporting Information,
   figures and graphical abstract remain.
 - Moved notes on earlier results out of the README into this file.
+- Added the trained weights for all nine runs (`runs/*/best.pt`), regenerated
+  from the fixed seed and checked against `runs/train_summary.json`.
 
 ## Results revised after external validation
 

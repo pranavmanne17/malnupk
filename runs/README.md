@@ -1,19 +1,22 @@
 # Trained runs
 
-Training histories (`*/history.json`) and the run summary (`train_summary.json`)
-are tracked here. The weights themselves (`*/best.pt`, 2.7 MB each) are not, to
-keep clones small; they are attached to the GitHub release.
-
-## Getting the weights
+Each run folder holds the trained weights (`best.pt`, about 2.7 MB) and the
+training history (`history.json`); `train_summary.json` summarises all nine.
+To evaluate them without retraining, generate the test data (under a minute),
+then run the evaluation script:
 
 ```bash
-# from the repository root, once a release exists
-gh release download v1.0.0 --pattern 'malnupk-weights.tar.gz'
-tar -xzf malnupk-weights.tar.gz      # restores runs/*/best.pt
+python scripts/make_dataset.py --n-patients 12000 --drugs-per-patient 3
+python scripts/evaluate.py --run runs/main_hybrid
 ```
 
-Or regenerate them from scratch, which reproduces them exactly from a fixed
-seed in about 2 hours on two CPU cores:
+## Regenerating the weights
+
+The weights reproduce exactly from a fixed seed, in about 2.5 hours on two CPU
+cores. Retrained on 21 October 2026, all nine runs matched the best validation
+scores in `train_summary.json` exactly, and `main_hybrid` reproduced the paper's
+headline test results (log-RMSE 0.190, median fold error 1.050, 98.6% within
+twofold).
 
 ```bash
 python scripts/make_dataset.py --n-patients 12000 --drugs-per-patient 3

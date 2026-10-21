@@ -17,10 +17,9 @@ bash scripts/run_all.sh          # full pipeline, ~2.5 h on two CPU cores
 ```
 
 Every number in the paper is in `outputs/`, so the results can be checked
-without re-running anything. Trained weights for all nine runs are attached to
-the release (`gh release download v1.0.0 --pattern 'malnupk-weights.tar.gz'`);
-they are kept out of git to keep clones small, and they regenerate exactly from
-a fixed seed. See `runs/README.md`.
+without re-running anything. Trained weights for all nine runs are included in
+`runs/*/best.pt` (about 2.7 MB each), and they regenerate exactly from a fixed
+seed. See `runs/README.md`.
 
 ## Repository layout
 
@@ -29,7 +28,7 @@ malnupk/     the package: simulator, drug library, solver, model, dosing, evalua
 scripts/     dataset generation, training, evaluation, figures, diagnostics
 tests/       47 tests, weighted toward physical correctness
 outputs/     every number in the paper, plus the six figures  (see outputs/README.md)
-runs/        training histories for all nine runs (weights: see runs/README.md)
+runs/        trained weights and training histories for all nine runs
 paper/       Supporting Information, figures, graphical abstract
 REFERENCES.md   30 verified sources, and the claims that still lack one
 RESULTS.md      generated from outputs/ by scripts/summarise.py
