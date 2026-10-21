@@ -9,9 +9,6 @@ undernourished, environmentally-exposed children.**
 Preprint: [`paper/MalnuPK_manuscript.pdf`](paper/MalnuPK_manuscript.pdf) · DOI to be added once posted.
 Pranav Manne ([ORCID 0009-0004-7575-7208](https://orcid.org/0009-0004-7575-7208))
 
-> ⚠️ **This is a research simulator and a model trained on its own synthetic
-> output. It has never been compared against a real patient. It must not be
-> used to make dosing decisions for anyone.** See [Honest limitations](#honest-limitations).
 
 ```bash
 git clone https://github.com/REPLACE-ME/malnupk && cd malnupk
